@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Política de Privacidade e Termos de Uso — Renato Augusto Tavares." />
+  <meta name="robots" content="noindex, follow" />
+  <title>Política de Privacidade e Termos de Uso — Renato Augusto Tavares</title>
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || preferred);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Estilos específicos desta página */
+    .legal-page { padding-top: var(--nav-h); min-height: 100vh; }
+
+    .legal-hero {
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+    .legal-hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .legal-hero p {
+      color: var(--text-muted);
+      font-size: .9375rem;
+    }
+
+    /* Abas de navegação */
+    .legal-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px 0 0;
+    }
+    .tab-btn {
+      padding: 10px 24px;
+      border-radius: var(--radius-full);
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: 1.5px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+    .tab-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .tab-btn.active {
+      background: var(--grad);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    /* Conteúdo legal */
+    .legal-body { padding: 56px 0 80px; }
+    .legal-content { max-width: 800px; margin: 0 auto; }
+    .legal-section { display: none; }
+    .legal-section.active { display: block; }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--primary);
+      color: var(--text);
+    }
+    .legal-content h3 {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: var(--text);
+    }
+    .legal-content p {
+      font-size: .9375rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .legal-content ul {
+      list-style: disc;
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .legal-content ul li {
+      font-size: .9375rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .legal-content strong { color: var(--text); font-weight: 600; }
+    .legal-content a { color: var(--primary); text-decoration: underline; }
+
+    .legal-updated {
+      display: inline-block;
+      margin-bottom: 32px;
+      padding: 6px 14px;
+      background: rgba(99,102,241,.1);
+      color: var(--primary);
+      border-radius: var(--radius-full);
+      font-size: .8125rem;
+      font-weight: 600;
+    }
+
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 40px;
+      color: var(--text-muted);
+      font-size: .9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+    .legal-back:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR (reutilizada do index.html) -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">RT</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="index.html#atuacao" class="nav-link">Atuação</a></li>
+      <li><a href="index.html#tecnologias" class="nav-link">Tecnologias</a></li>
+      <li><a href="index.html#projetos" class="nav-link">Projetos</a></li>
+      <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-theme" id="themeToggle" aria-label="Alternar tema">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="legal-page">
+
+  <!-- HEADER -->
+  <div class="legal-hero">
+    <div class="container">
+      <h1><span class="gradient-text">Documentos Legais</span></h1>
+      <p>Política de Privacidade e Termos de Uso — renatotavares.com</p>
+      <div class="legal-tabs">
+        <button class="tab-btn active" data-tab="privacidade" id="tab-privacidade">
+          Política de Privacidade
+        </button>
+        <button class="tab-btn" data-tab="termos" id="tab-termos">
+          Termos de Uso
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <div class="legal-body">
+    <div class="container legal-content">
+
+      <a href="index.html" class="legal-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Voltar ao site
+      </a>
+
+      <!-- ====================================================
+           POLÍTICA DE PRIVACIDADE
+      ==================================================== -->
+      <section id="privacidade" class="legal-section active">
+        <h2>Política de Privacidade</h2>
+        <span class="legal-updated">Última atualização: 01 de abril de 2025</span>
+
+        <h3>1. Introdução</h3>
+        <p>
+          Esta Política de Privacidade descreve como o site <strong>renatotavares.com</strong>,
+          de titularidade de <strong>Renato Augusto Tavares</strong>, coleta, utiliza e protege
+          as informações dos visitantes, em conformidade com a
+          <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>, o
+          <strong>Marco Civil da Internet (Lei nº 12.965/2014)</strong> e as políticas do
+          <strong>Google AdSense</strong> e do <strong>Google Play</strong>.
+        </p>
+        <p>
+          Ao acessar e utilizar este site, você concorda com as práticas descritas nesta
+          política. Caso não concorde, recomendamos que não utilize o site.
+        </p>
+
+        <h3>2. Informações Coletadas</h3>
+        <p>Coletamos dois tipos de informação:</p>
+        <p><strong>a) Informações fornecidas voluntariamente:</strong></p>
+        <ul>
+          <li>Nome e endereço de e-mail (quando o visitante entrar em contato).</li>
+          <li>Qualquer outra informação enviada via formulário de contato.</li>
+        </ul>
+        <p><strong>b) Informações coletadas automaticamente:</strong></p>
+        <ul>
+          <li>Endereço IP e dados de localização aproximada.</li>
+          <li>Tipo de navegador, sistema operacional e dispositivo utilizado.</li>
+          <li>Páginas visitadas, tempo de permanência e fluxo de navegação.</li>
+          <li>Origem do acesso (referência de outros sites ou mecanismos de busca).</li>
+          <li>Dados de cookies e tecnologias semelhantes (detalhados abaixo).</li>
+        </ul>
+
+        <h3>3. Cookies e Tecnologias de Rastreamento</h3>
+        <p>
+          Utilizamos <strong>cookies</strong> — pequenos arquivos de texto armazenados no
+          seu navegador — para melhorar a experiência de navegação, exibir anúncios
+          relevantes e analisar o tráfego do site.
+        </p>
+        <p>Os tipos de cookies utilizados são:</p>
+        <ul>
+          <li><strong>Cookies essenciais:</strong> necessários para o funcionamento básico do site
+            (ex.: preferência de tema claro/escuro).</li>
+          <li><strong>Cookies analíticos:</strong> coletam dados agregados e anônimos sobre como
+            os visitantes utilizam o site (Google Analytics).</li>
+          <li><strong>Cookies de publicidade:</strong> utilizados pelo Google AdSense para exibir
+            anúncios personalizados com base nos seus interesses e histórico de navegação.</li>
+          <li><strong>Cookies de terceiros:</strong> fornecidos por parceiros como Google, que
+            podem usar esses cookies para fins de publicidade e análise.</li>
+        </ul>
+        <p>
+          Você pode controlar ou desativar cookies nas configurações do seu navegador.
+          A desativação de cookies de publicidade não removerá os anúncios, mas os tornará
+          menos relevantes para o seu perfil.
+        </p>
+
+        <h3>4. Google AdSense e DoubleClick Cookie</h3>
+        <p>
+          Este site utiliza o <strong>Google AdSense</strong> para exibir anúncios publicitários.
+          O Google AdSense utiliza o <strong>cookie DoubleClick</strong> para veicular anúncios
+          e coletar dados sobre as visitas a este e a outros sites na Internet, permitindo
+          que os anunciantes exibam publicidade com base nas visitas anteriores do usuário.
+        </p>
+        <p>
+          O Google utiliza essas informações para personalizar anúncios de acordo com os
+          interesses do usuário. Para saber mais sobre como o Google usa os dados, acesse:
+          <a href="https://policies.google.com/technologies/ads" target="_blank"
+            rel="noopener noreferrer">Como o Google usa dados de sites e aplicativos</a>.
+        </p>
+        <p>
+          Os usuários podem <strong>optar por não receber publicidade personalizada</strong>
+          do Google acessando as
+          <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
+          Configurações de anúncios do Google</a>.
+        </p>
+        <p>
+          Adicionalmente, os usuários podem optar por não usar o cookie DoubleClick
+          visitando a página de
+          <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">
+          exclusão voluntária da Network Advertising Initiative</a>.
+        </p>
+
+        <h3>5. Finalidade do Uso dos Dados</h3>
+        <p>Os dados coletados são utilizados para as seguintes finalidades:</p>
+        <ul>
+          <li>Responder a solicitações de contato enviadas pelo visitante.</li>
+          <li>Analisar o desempenho e melhorar o conteúdo e a usabilidade do site.</li>
+          <li>Exibir anúncios publicitários personalizados via Google AdSense.</li>
+          <li>Cumprir obrigações legais e regulatórias aplicáveis.</li>
+          <li>Garantir a segurança e prevenir fraudes e abusos.</li>
+        </ul>
+
+        <h3>6. Compartilhamento de Dados com Terceiros</h3>
+        <p>
+          Não vendemos, alugamos nem comercializamos suas informações pessoais.
+          Podemos compartilhar dados nas seguintes situações:
+        </p>
+        <ul>
+          <li><strong>Google LLC:</strong> para fins de publicidade (AdSense/DoubleClick)
+            e análise de tráfego (Google Analytics), conforme a
+            <a href="https://policies.google.com/privacy" target="_blank"
+              rel="noopener noreferrer">Política de Privacidade do Google</a>.</li>
+          <li><strong>Exigência legal:</strong> quando obrigados por lei, ordem judicial
+            ou autoridade governamental competente.</li>
+          <li><strong>Proteção de direitos:</strong> quando necessário para proteger os
+            direitos, propriedade ou segurança do titular do site, dos usuários ou
+            de terceiros.</li>
+        </ul>
+
+        <h3>7. Google Play — Aplicativos</h3>
+        <p>
+          Se você instalou um aplicativo vinculado a este site publicado no
+          <strong>Google Play</strong>, as seguintes informações se aplicam:
+        </p>
+        <ul>
+          <li>O aplicativo pode solicitar permissões do dispositivo (câmera, armazenamento,
+            localização) somente quando estritamente necessário para suas funcionalidades.</li>
+          <li>Dados coletados pelo aplicativo são usados exclusivamente para o funcionamento
+            do serviço, conforme descrito na ficha do app na Play Store.</li>
+          <li>Não compartilhamos dados coletados por aplicativos com terceiros para fins
+            publicitários sem seu consentimento explícito.</li>
+          <li>Você pode revogar permissões a qualquer momento nas configurações do
+            dispositivo Android.</li>
+          <li>Para solicitar a exclusão de dados do aplicativo, entre em contato pelo
+            e-mail indicado na seção de Contato desta política.</li>
+        </ul>
+
+        <h3>8. Direitos do Usuário (LGPD)</h3>
+        <p>
+          Nos termos da <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>,
+          você possui os seguintes direitos em relação aos seus dados pessoais:
+        </p>
+        <ul>
+          <li><strong>Confirmação e acesso:</strong> solicitar confirmação da existência
+            de tratamento e acessar seus dados.</li>
+          <li><strong>Correção:</strong> solicitar a correção de dados incompletos,
+            inexatos ou desatualizados.</li>
+          <li><strong>Anonimização, bloqueio ou eliminação:</strong> de dados
+            desnecessários, excessivos ou tratados em desconformidade com a LGPD.</li>
+          <li><strong>Portabilidade:</strong> solicitar a transferência dos dados a outro
+            fornecedor de serviço, mediante requisição expressa.</li>
+          <li><strong>Eliminação:</strong> solicitar a exclusão dos dados tratados com
+            base em seu consentimento.</li>
+          <li><strong>Revogação do consentimento:</strong> retirar o consentimento
+            dado para tratamento de dados a qualquer momento.</li>
+          <li><strong>Oposição:</strong> opor-se ao tratamento realizado com fundamento
+            em uma das hipóteses de dispensa de consentimento.</li>
+          <li><strong>Informação:</strong> ser informado sobre as entidades públicas e
+            privadas com as quais o controlador realizou uso compartilhado de dados.</li>
+        </ul>
+        <p>
+          Para exercer qualquer um desses direitos, entre em contato pelo e-mail informado
+          ao final desta política. Responderemos no prazo de até <strong>15 dias úteis</strong>.
+        </p>
+
+        <h3>9. Retenção de Dados</h3>
+        <p>
+          Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as
+          finalidades descritas nesta política ou conforme exigido por lei. Dados de
+          contato são retidos por até 2 (dois) anos; dados analíticos anonimizados podem
+          ser mantidos indefinidamente.
+        </p>
+
+        <h3>10. Segurança dos Dados</h3>
+        <p>
+          Adotamos medidas técnicas e organizacionais adequadas para proteger suas
+          informações contra acesso não autorizado, alteração, divulgação ou destruição.
+          No entanto, nenhum sistema de transmissão pela Internet é 100% seguro.
+          Caso identifique qualquer vulnerabilidade ou incidente, entre em contato.
+        </p>
+
+        <h3>11. Privacidade de Menores</h3>
+        <p>
+          Este site não é direcionado a menores de 18 (dezoito) anos e não coleta
+          intencionalmente dados pessoais de crianças e adolescentes. Caso tomemos
+          conhecimento de que coletamos dados de um menor sem o devido consentimento dos
+          pais ou responsáveis, excluiremos tais dados imediatamente.
+        </p>
+
+        <h3>12. Links para Sites de Terceiros</h3>
+        <p>
+          Este site pode conter links para sites externos. Não nos responsabilizamos
+          pelas políticas de privacidade ou pelo conteúdo de terceiros. Recomendamos
+          que você leia as políticas de privacidade de qualquer site que visitar.
+        </p>
+
+        <h3>13. Alterações nesta Política</h3>
+        <p>
+          Podemos atualizar esta Política de Privacidade periodicamente para refletir
+          mudanças nas práticas de dados, requisitos legais ou funcionamento do site.
+          A data da última atualização será sempre indicada no topo desta página. O uso
+          continuado do site após alterações representa sua aceitação da política revisada.
+        </p>
+
+        <h3>14. Contato e Encarregado de Dados (DPO)</h3>
+        <p>
+          Para dúvidas, solicitações relacionadas aos seus dados pessoais ou exercício
+          dos direitos previstos na LGPD, entre em contato:
+        </p>
+        <ul>
+          <li><strong>Responsável:</strong> Renato Augusto Tavares</li>
+          <li><strong>E-mail:</strong> dr.renatotavares@gmail.com</li>
+          <li><strong>Site:</strong> renatotavares.com</li>
+        </ul>
+      </section>
+
+      <!-- ====================================================
+           TERMOS DE USO
+      ==================================================== -->
+      <section id="termos" class="legal-section">
+        <h2>Termos de Uso</h2>
+        <span class="legal-updated">Última atualização: 01 de abril de 2025</span>
+
+        <h3>1. Aceitação dos Termos</h3>
+        <p>
+          Ao acessar e utilizar o site <strong>renatotavares.com</strong>, você concorda
+          com estes Termos de Uso e com nossa
+          <a href="#" onclick="showTab('privacidade'); return false;">Política de Privacidade</a>.
+          Caso não concorde com qualquer disposição, solicitamos que não utilize este site.
+          Estes termos se aplicam a todos os visitantes, usuários e demais pessoas que
+          acessam ou utilizam o serviço.
+        </p>
+
+        <h3>2. Uso Permitido do Site</h3>
+        <p>
+          Este site tem caráter <strong>informativo e pessoal</strong>. Você pode utilizá-lo
+          para:
+        </p>
+        <ul>
+          <li>Conhecer o perfil profissional e acadêmico de Renato Augusto Tavares.</li>
+          <li>Visualizar projetos e tecnologias apresentados.</li>
+          <li>Entrar em contato para fins profissionais legítimos.</li>
+        </ul>
+
+        <h3>3. Responsabilidades do Usuário</h3>
+        <p>Ao utilizar este site, você se compromete a:</p>
+        <ul>
+          <li>Não realizar qualquer ação que possa danificar, sobrecarregar ou prejudicar
+            o funcionamento do site ou de seus servidores.</li>
+          <li>Não tentar acessar áreas restritas ou coletar dados de outros usuários sem
+            autorização.</li>
+          <li>Não utilizar o site para enviar comunicações não solicitadas (spam),
+            conteúdo ilegal, ofensivo, difamatório ou que viole direitos de terceiros.</li>
+          <li>Não reproduzir, copiar, vender ou explorar comercialmente qualquer parte
+            do conteúdo sem autorização prévia e por escrito.</li>
+          <li>Não utilizar ferramentas automatizadas (bots, scrapers, crawlers) para
+            coletar conteúdo sem consentimento expresso.</li>
+          <li>Cumprir toda a legislação brasileira aplicável, incluindo o Marco Civil
+            da Internet (Lei nº 12.965/2014) e a LGPD (Lei nº 13.709/2018).</li>
+        </ul>
+
+        <h3>4. Propriedade Intelectual</h3>
+        <p>
+          Todo o conteúdo disponibilizado neste site — incluindo textos, imagens, código-fonte,
+          logotipos, design, estrutura visual e materiais de pesquisa — é de propriedade
+          exclusiva de <strong>Renato Augusto Tavares</strong> e está protegido pelas leis
+          brasileiras e internacionais de propriedade intelectual e direito autoral
+          (<strong>Lei nº 9.610/1998</strong>).
+        </p>
+        <p>
+          É proibida a reprodução, distribuição, modificação, exibição pública ou qualquer
+          outro uso do conteúdo sem autorização prévia e expressa do titular, exceto quando
+          expressamente permitido por lei ou com fins de citação acadêmica devidamente
+          referenciada.
+        </p>
+
+        <h3>5. Limitação de Responsabilidade</h3>
+        <p>
+          O site é fornecido "no estado em que se encontra" (<em>as is</em>), sem garantias
+          expressas ou implícitas de qualquer tipo. Renato Augusto Tavares não se
+          responsabiliza por:
+        </p>
+        <ul>
+          <li>Erros, omissões ou imprecisões no conteúdo publicado.</li>
+          <li>Danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso
+            ou impossibilidade de uso do site.</li>
+          <li>Interrupções, falhas técnicas, vírus ou outros elementos prejudiciais
+            transmitidos por terceiros por meio do site.</li>
+          <li>Conteúdo ou práticas de sites de terceiros vinculados a este.</li>
+        </ul>
+
+        <h3>6. Isenção de Garantias</h3>
+        <p>
+          Embora nos esforcemos para manter as informações atualizadas e precisas, não
+          garantimos que o conteúdo do site seja completo, exato, atual ou livre de erros
+          técnicos. O site pode ser temporariamente indisponível por motivos de manutenção
+          ou circunstâncias além do nosso controle.
+        </p>
+
+        <h3>7. Publicidade (Google AdSense)</h3>
+        <p>
+          Este site pode exibir anúncios veiculados pelo <strong>Google AdSense</strong>.
+          Os anúncios são fornecidos pelo Google LLC e podem ser personalizados com base
+          em suas visitas a este e outros sites. Não nos responsabilizamos pelo conteúdo
+          dos anúncios exibidos, que são de responsabilidade exclusiva dos anunciantes e
+          do Google.
+        </p>
+        <p>
+          Para mais informações sobre como gerenciar suas preferências de publicidade,
+          consulte a seção sobre Google AdSense em nossa
+          <a href="#" onclick="showTab('privacidade'); return false;">Política de Privacidade</a>.
+        </p>
+
+        <h3>8. Aplicativos Google Play</h3>
+        <p>
+          Se este site referenciar aplicativos disponíveis no <strong>Google Play</strong>,
+          o uso desses aplicativos está sujeito também:
+        </p>
+        <ul>
+          <li>Aos
+            <a href="https://play.google.com/about/play-terms/index.html" target="_blank"
+              rel="noopener noreferrer">Termos de Serviço do Google Play</a>.</li>
+          <li>Às políticas específicas de cada aplicativo, detalhadas em suas respectivas
+            páginas na Play Store.</li>
+          <li>À nossa Política de Privacidade para o tratamento de dados coletados
+            pelos aplicativos.</li>
+        </ul>
+
+        <h3>9. Disponibilidade do Serviço</h3>
+        <p>
+          Reservamo-nos o direito de modificar, suspender ou encerrar o site, ou qualquer
+          parte dele, a qualquer momento e sem aviso prévio. Não nos responsabilizamos
+          por eventuais prejuízos decorrentes de tais mudanças.
+        </p>
+
+        <h3>10. Modificações dos Termos</h3>
+        <p>
+          Estes Termos de Uso podem ser atualizados periodicamente. Alterações entram em
+          vigor imediatamente após a publicação no site. O uso continuado do site após
+          qualquer modificação constitui aceitação dos novos termos. Recomendamos a
+          revisão periódica desta página.
+        </p>
+
+        <h3>11. Lei Aplicável e Foro</h3>
+        <p>
+          Estes Termos de Uso são regidos pelas leis da <strong>República Federativa do
+          Brasil</strong>, especialmente pelo Marco Civil da Internet (Lei nº 12.965/2014),
+          pela LGPD (Lei nº 13.709/2018) e pelo Código de Defesa do Consumidor
+          (Lei nº 8.078/1990), no que couber.
+        </p>
+        <p>
+          Fica eleito o foro da <strong>Comarca de domicílio do titular</strong> para
+          dirimir quaisquer controvérsias decorrentes destes Termos, com renúncia a
+          qualquer outro, por mais privilegiado que seja.
+        </p>
+
+        <h3>12. Contato</h3>
+        <p>
+          Para dúvidas, sugestões ou notificações legais relacionadas a estes Termos
+          de Uso, entre em contato:
+        </p>
+        <ul>
+          <li><strong>Responsável:</strong> Renato Augusto Tavares</li>
+          <li><strong>E-mail:</strong> dr.renatotavares@gmail.com</li>
+          <li><strong>Site:</strong> renatotavares.com</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">RT</span>
+      <div>
+        <p class="footer-name">Renato Augusto Tavares</p>
+        <p class="footer-tagline">Engenheiro de Software &amp; IA</p>
+      </div>
+    </div>
+    <nav class="footer-links">
+      <a href="termos.html#privacidade">Política de Privacidade</a>
+      <span>·</span>
+      <a href="termos.html#termos">Termos de Uso</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Renato Augusto Tavares. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  /* Lógica de abas da página de termos */
+  function showTab(tabId) {
+    document.querySelectorAll('.legal-section').forEach((s) => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
+    const section = document.getElementById(tabId);
+    const btn = document.querySelector('[data-tab="' + tabId + '"]');
+    if (section) section.classList.add('active');
+    if (btn) btn.classList.add('active');
+    // Scroll suave para o conteúdo
+    section && section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => showTab(btn.dataset.tab));
+  });
+
+  /* Abre pela âncora da URL (#privacidade ou #termos) */
+  const hash = window.location.hash.replace('#', '');
+  if (hash === 'privacidade' || hash === 'termos') showTab(hash);
+</script>
+</body>
+</html>
