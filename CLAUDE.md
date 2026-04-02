@@ -2,6 +2,20 @@
 
 Site pessoal de **Renato Augusto Tavares** — Engenheiro de Software, pesquisador de IA e sistemas embarcados.
 
+## Memória do Projeto (LEIA SEMPRE)
+
+A memória canônica deste projeto fica em `.claude/memory/` dentro deste repositório.
+
+**Ao iniciar qualquer conversa neste projeto:**
+1. Leia `.claude/memory/MEMORY.md` para ver o índice
+2. Leia os arquivos de memória relevantes para a tarefa
+3. **Nunca use memória de `~/.claude/projects/...`** — aquela pasta é apenas um espelho desatualizado
+
+**Ao encerrar ou após mudanças relevantes de contexto:**
+1. Atualize o arquivo de memória correspondente em `.claude/memory/`
+2. Atualize o índice `MEMORY.md` se necessário
+3. **NÃO faça commit automaticamente** — só commitar quando o usuário pedir explicitamente
+
 ## Stack Técnico
 
 - **Apenas:** HTML5 + CSS3 + JavaScript vanilla (sem frameworks)
