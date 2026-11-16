@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O expoente de contagem do mapa 5x+1 — Renato Augusto Tavares</title>
+  <meta name="description" content="Um estudo computacional calibrado que compara as previsões de Kontorovich–Lagarias (0,650919) e de Volkov (0,678) para o expoente de contagem de predecessores…">
+  <meta name="author" content="Renato Augusto Tavares">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://renatotavares.com/pesquisa/expoente-5x-mais-1/">
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Renato Augusto Tavares">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="O expoente de contagem do mapa 5x+1">
+  <meta property="og:description" content="Um estudo computacional calibrado que compara as previsões de Kontorovich–Lagarias (0,650919) e de Volkov (0,678) para o expoente de contagem de predecessores…">
+  <meta property="og:url" content="https://renatotavares.com/pesquisa/expoente-5x-mais-1/">
+  <meta property="og:image" content="https://renatotavares.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renato Augusto Tavares: ciência da computação, matemática computacional e engenharia de software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O expoente de contagem do mapa 5x+1">
+  <meta name="twitter:description" content="Um estudo computacional calibrado que compara as previsões de Kontorovich–Lagarias (0,650919) e de Volkov (0,678) para o expoente de contagem de predecessores…">
+  <meta name="twitter:image" content="https://renatotavares.com/assets/img/og.png">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="me" href="https://orcid.org/0009-0002-0196-3311">
+  <link rel="me" href="https://github.com/rat">
+  <link rel="alternate" type="application/atom+xml" title="Publicações de Renato Augusto Tavares" href="/publicacoes/feed.xml">
+  <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.className+=' js'})()</script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cc4866218">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://renatotavares.com/"},{"@type":"ListItem","position":2,"name":"Pesquisa","item":"https://renatotavares.com/pesquisa/"},{"@type":"ListItem","position":3,"name":"Expoente 5x+1","item":"https://renatotavares.com/pesquisa/expoente-5x-mais-1/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="Renato Augusto Tavares, página inicial"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="/pesquisa/" aria-current="page">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li class="nav-lang"><a href="/en/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+      <button class="tool theme-btn" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar entre tema claro e escuro"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor"/></svg></button>
+      <button class="tool menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Fechar">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<header class="page-head is-article"><div class="wrap grid"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/pesquisa/">Pesquisa</a></li><li aria-current="page">Expoente 5x+1</li></ol></nav><h1>O expoente de contagem do mapa 5x+1</h1><p class="lede">Dois modelos probabilísticos preveem expoentes diferentes para o número de predecessores na árvore do mapa <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">5x+1</annotation></semantics></math>: cerca de 0,650919 e cerca de 0,678. A diferença é menor que o erro de uma medição ingênua. Este trabalho mede com um instrumento calibrado.</p></div></header><div class="article"><div class="wrap grid"><aside class="article-side">
+  <dl class="kv">
+    <dt>Situação</dt><dd>Preprint, setembro de 2026. Sem revisão por pares.</dd>
+    <dt>Área</dt><dd>Mapas do tipo Collatz, passeios aleatórios ramificados</dd>
+    <dt>Publicações</dt><dd><a href="/publicacoes/expoente-de-contagem-5x-mais-1/">Preprint (SSRN)</a></dd>
+    <dt>Código e dados</dt><dd><a href="https://github.com/faculdade/accelerated-5x1-predecessor-exponent">GitHub</a><br><a href="https://doi.org/10.5281/zenodo.22182794">Zenodo</a></dd>
+  </dl>
+  <h2 id="toc-h">Nesta página</h2><nav class="toc" aria-labelledby="toc-h"><ol><li><a href="#duas-previsoes">Duas previsões</a></li><li><a href="#instrumento">O problema do instrumento</a></li><li><a href="#calibracao">A calibração</a></li><li><a href="#resultados">Resultados, por situação</a></li><li><a href="#controles">Controles negativos</a></li></ol></nav></aside><div class="article-main"><div class="prose ">
+<h2 id="duas-previsoes">Duas previsões</h2>
+<p>Troque o 3 por um 5 no problema de Collatz e o comportamento muda: acredita-se que quase todas as órbitas do mapa <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>5</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">5x+1</annotation></semantics></math> escapam para o infinito. A árvore reversa de um inteiro, formada pelos seus predecessores, ainda existe e cresce, mas devagar: o número de predecessores abaixo de <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math> deve se comportar como <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>x</mi><mi>η</mi></msup></mrow><annotation encoding="application/x-tex">x^{\eta}</annotation></semantics></math> para algum expoente <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>η</mi></mrow><annotation encoding="application/x-tex">\eta</annotation></semantics></math> menor que 1.</p>
+<p>Há duas previsões para esse expoente. Kontorovich e Lagarias chegam a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>η</mi><mo>≈</mo><mn>0,650919</mn></mrow><annotation encoding="application/x-tex">\eta \approx 0,650919</annotation></semantics></math> por um modelo de passeio aleatório ramificado; a própria existência do expoente é a Conjectura 7.2 deles. Volkov, por outro modelo estocástico, chega a cerca de <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0,678</mn></mrow><annotation encoding="application/x-tex">0,678</annotation></semantics></math>. A distância entre as duas é de 0,027, e Kontorovich e Lagarias observam que os dados de Volkov não pareciam suficientes para discriminar entre os valores.</p>
+
+<h2 id="instrumento">O problema do instrumento</h2>
+<p>A árvore pode ser enumerada exatamente. Um estimador de janela fixa aplicado a essa enumeração lê 0,639, com intervalo de 95% entre 0,633 e 0,645, o que não exclui nenhum dos dois valores. E há algo pior: aplicado a uma construção sintética cujo expoente é conhecido, o mesmo estimador lê 0,038 abaixo do alvo. O viés do instrumento é maior que a diferença que se quer medir. Uma leitura crua, por mais dígitos que tenha, não decide a questão.</p>
+
+<h2 id="calibracao">A calibração</h2>
+<p>A saída foi construir seis árvores sintéticas que preservam a estrutura de irmãos da árvore aritmética, de forma exata ou relaxada, e que são ajustadas para ter um expoente escolhido: quatro para 0,650919 e duas para 0,678. O estimador é então lido na árvore verdadeira e nas seis construções, década por década, e a pergunta passa a ser em qual das duas faixas a leitura verdadeira cai.</p>
+</div><figure class="fig " id="fig-5"><div class="fig-scroll" tabindex="0" role="group" aria-label="Figura (role na horizontal em telas estreitas)"><svg class="chart" viewBox="0 0 720 380" role="img" aria-labelledby="fk-t fk-d"><defs><pattern id="hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="hatch" x1="0" y1="0" x2="0" y2="5"/></pattern></defs><title id="fk-t">Leitura do expoente de contagem da árvore 5x+1 por década, contra construções calibradas</title><desc id="fk-d">Em cada uma das cinco décadas, a leitura da árvore aritmética é comparada com a faixa das construções ajustadas ao valor de Kontorovich e Lagarias e com a faixa das ajustadas ao valor de Volkov. Na década mais profunda a leitura, 0,64926, cai dentro da primeira faixa e abaixo da segunda.</desc><line class="grid" x1="56" x2="570" y1="287.14" y2="287.14"/><text class="ax" x="48" y="291.14" text-anchor="end">0,60</text><line class="grid" x1="56" x2="570" y1="227.33" y2="227.33"/><text class="ax" x="48" y="231.33" text-anchor="end">0,62</text><line class="grid" x1="56" x2="570" y1="167.52" y2="167.52"/><text class="ax" x="48" y="171.52" text-anchor="end">0,64</text><line class="grid" x1="56" x2="570" y1="107.71" y2="107.71"/><text class="ax" x="48" y="111.71" text-anchor="end">0,66</text><line class="grid" x1="56" x2="570" y1="47.9" y2="47.9"/><text class="ax" x="48" y="51.9" text-anchor="end">0,68</text>
+<line class="ln ln-conj" x1="56" x2="570" y1="134.87" y2="134.87"/><line class="ln ln-conj" x1="56" x2="570" y1="53.89" y2="53.89"/>
+<rect class="band band-a" x="79.4" width="26" y="246.29" height="68.84"><title>Construções ajustadas a 0,650919 em 10⁵→10⁶: de 0,59064 a 0,61366</title></rect><rect class="band band-b" x="109.4" width="26" y="153.26" height="151.59"><title>Construções ajustadas a 0,678 em 10⁵→10⁶: de 0,59408 a 0,64477</title></rect><line class="rd" x1="73.4" x2="141.4" y1="185.44" y2="185.44"/><circle class="pt" cx="107.4" cy="185.44" r="3.6"><title>Árvore aritmética em 10⁵→10⁶: 0,63401</title></circle><text class="ax" x="107.4" y="350" text-anchor="middle">10⁵→10⁶</text><rect class="band band-a" x="182.2" width="26" y="175.03" height="71.35"><title>Construções ajustadas a 0,650919 em 10⁶→10⁷: de 0,61363 a 0,63749</title></rect><rect class="band band-b" x="212.2" width="26" y="99.7" height="84.81"><title>Construções ajustadas a 0,678 em 10⁶→10⁷: de 0,63432 a 0,66268</title></rect><line class="rd" x1="176.2" x2="244.2" y1="206.49" y2="206.49"/><circle class="pt" cx="210.2" cy="206.49" r="3.6"><title>Árvore aritmética em 10⁶→10⁷: 0,62697</title></circle><text class="ax" x="210.2" y="350" text-anchor="middle">10⁶→10⁷</text><rect class="band band-a" x="285" width="26" y="144.86" height="48.02"><title>Construções ajustadas a 0,650919 em 10⁷→10⁸: de 0,63152 a 0,64758</title></rect><rect class="band band-b" x="315" width="26" y="71.83" height="24.1"><title>Construções ajustadas a 0,678 em 10⁷→10⁸: de 0,66394 a 0,67200</title></rect><line class="rd" x1="279" x2="347" y1="148.92" y2="148.92"/><circle class="pt" cx="313" cy="148.92" r="3.6"><title>Árvore aritmética em 10⁷→10⁸: 0,64622</title></circle><text class="ax" x="313" y="350" text-anchor="middle">10⁷→10⁸</text><rect class="band band-a" x="387.8" width="26" y="137.92" height="23.05"><title>Construções ajustadas a 0,650919 em 10⁸→10⁹: de 0,64219 a 0,64990</title></rect><rect class="band band-b" x="417.8" width="26" y="55.53" height="17.58"><title>Construções ajustadas a 0,678 em 10⁸→10⁹: de 0,67157 a 0,67745</title></rect><line class="rd" x1="381.8" x2="449.8" y1="141.21" y2="141.21"/><circle class="pt" cx="415.8" cy="141.21" r="3.6"><title>Árvore aritmética em 10⁸→10⁹: 0,64880</title></circle><text class="ax" x="415.8" y="350" text-anchor="middle">10⁸→10⁹</text><rect class="band band-a" x="490.6" width="26" y="133.97" height="11.48"><title>Construções ajustadas a 0,650919 em 10⁹→10¹⁰: de 0,64738 a 0,65122</title></rect><rect class="band band-b" x="520.6" width="26" y="55.44" height="11.66"><title>Construções ajustadas a 0,678 em 10⁹→10¹⁰: de 0,67358 a 0,67748</title></rect><line class="rd" x1="484.6" x2="552.6" y1="139.83" y2="139.83"/><circle class="pt" cx="518.6" cy="139.83" r="3.6"><title>Árvore aritmética em 10⁹→10¹⁰: 0,64926</title></circle><text class="ax" x="518.6" y="350" text-anchor="middle">10⁹→10¹⁰</text>
+<text class="lb" x="580" y="57.89">0,678</text><text class="lb lb-sub" x="580" y="73.44">previsão de Volkov</text>
+<text class="lb" x="580" y="138.87">0,650919</text><text class="lb lb-sub" x="580" y="154.42">Kontorovich–Lagarias</text>
+<text class="ax" x="313" y="374" text-anchor="middle">década de contagem (faixa de inteiros enumerados)</text></svg></div><figcaption><b>Figura 5.</b> Leitura do estimador na árvore aritmética (ponto e traço) em cada década de contagem, contra a faixa das construções ajustadas a 0,650919 (barra cheia) e a faixa das ajustadas a 0,678 (barra hachurada). As linhas pontilhadas são os alvos nominais; as barras ficam abaixo deles porque o estimador tem viés. Na década mais profunda, a leitura 0,64926 cai dentro da primeira faixa e 0,02432 abaixo da segunda. Dados: tabela por década do preprint.</figcaption></figure><div class="prose "><h2 id="resultados">Resultados, por situação</h2></div><div class="claims"><div class="claim"><p class="claim-k"><span class="st st-proved" aria-hidden="true"></span><span>Demonstrado</span></p><div class="claim-b"><p><strong>Congruência entre irmãos.</strong> Na árvore reversa do mapa <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><mi>x</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">qx+1</annotation></semantics></math> acelerado, filhos consecutivos de um mesmo nó satisfazem exatamente</p><div class="eq"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>w</mi><mo>′</mo><mo>=</mo><msup><mn>2</mn><mi>d</mi></msup><mi>w</mi><mo>+</mo><mfrac><mrow><msup><mn>2</mn><mi>d</mi></msup><mo>−</mo><mn>1</mn></mrow><mi>q</mi></mfrac><mo separator="true">,</mo><mspace width="2em"/><mi>d</mi><mo>=</mo><msub><mi mathvariant="normal">ord</mi><mi>q</mi></msub><mo>&#x2061;</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>.</mo></mrow><annotation encoding="application/x-tex">w' = 2^{d} w + \frac{2^{d} - 1}{q}, \qquad d = \operatorname{ord}_q(2).</annotation></semantics></math></div><p>Para <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>q</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">q = 5</annotation></semantics></math>, isso é <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>w</mi><mo>′</mo><mo>=</mo><mn>16</mn><mi>w</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">w' = 16w + 3</annotation></semantics></math>. É o único enunciado demonstrado do trabalho, e é o que as construções sintéticas precisam preservar.</p></div></div><div class="claim"><p class="claim-k"><span class="st st-comp" aria-hidden="true"></span><span>Evidência computacional</span></p><div class="claim-b"><p>Na década <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>10</mn><mn>9</mn></msup><mo>→</mo><msup><mn>10</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">10^{9} \to 10^{10}</annotation></semantics></math>, a árvore aritmética lê <strong>0,64926</strong>, com intervalo de 95% entre 0,64818 e 0,65027. As quatro construções ajustadas a 0,650919 leem entre 0,64738 e 0,65122; as duas ajustadas a 0,678, entre 0,67358 e 0,67748.</p><p>A leitura fica 0,02432 abaixo da menor das duas construções de Volkov, com intervalo de bootstrap de 95% entre 0,0208 e 0,0273.</p><p class="src">300 raízes abaixo de 10⁴; enumeração em C com OpenMP</p></div></div><div class="claim"><p class="claim-k"><span class="st st-comp" aria-hidden="true"></span><span>Evidência computacional</span></p><div class="claim-b"><p>A regra de parada do experimento original de Volkov, reimplementada, reproduz as três primeiras estimativas dele e dá 0,681 contra o 0,680 publicado.</p></div></div><div class="claim"><p class="claim-k"><span class="st st-conj" aria-hidden="true"></span><span>Hipóteses da leitura</span></p><div class="claim-b"><p>A comparação supõe que o expoente realizado por cada construção é igual ao seu alvo e que o viés calibrado se transfere para a árvore determinística. Nenhuma das duas coisas é provada. Outras três entradas do argumento são problemas em aberto, entre elas a existência do expoente.</p></div></div><div class="claim"><p class="claim-k"><span class="st st-open" aria-hidden="true"></span><span>Em aberto</span></p><div class="claim-b"><p>Se o limite é 0,650919 ou algum valor abaixo dele. O trabalho não diz, e não poderia dizer.</p></div></div></div><div class="prose ">
+<p>Em uma frase: sob as hipóteses declaradas, os dados são compatíveis com a previsão de Kontorovich e Lagarias e ficam separados da de Volkov. Isso é evidência computacional, não uma refutação.</p>
+
+<h2 id="controles">Controles negativos</h2>
+<p>Uma verificação que nunca foi vista falhar não é evidência de nada. Três conferências do repositório vêm acompanhadas de controles negativos executados: uma sonda para cada elo da cadeia de cálculo da pressão, uma réplica do gerador de números aleatórios comparada com o código em C, e três mutações que o filtro de comparação de saídas tem de detectar.</p>
+<p>Todo arquivo de saída versionado se reproduz byte a byte a partir do código e dos dados, com duas exceções documentadas, que carregam um tempo de relógio embutido. O repositório também registra um erro que aconteceu durante a revisão, quando duas amostras de 300 raízes, que compartilham apenas 31, foram confundidas; a conferência que hoje distingue as duas existe por causa disso.</p>
+</div><nav class="pager" aria-label="Outras linhas de pesquisa"><a href="/pesquisa/cobertura-fraca/"><span>Anterior</span>A Conjectura da Cobertura Fraca</a><a href="/pesquisa/processamento-de-imagens/"><span>Seguinte</span>Processamento de imagens</a></nav></div></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-name"><svg class="mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></p>
+      <p>Ciência da computação, matemática computacional e engenharia de software. Goiânia, Brasil.</p>
+      <p><a href="mailto:dr.renatotavares@gmail.com">dr.renatotavares@gmail.com</a></p>
+    </div>
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Perfis">
+      <h2>Perfis</h2>
+      <ul>
+        <li><a href="https://orcid.org/0009-0002-0196-3311" rel="me noopener">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5L2RbhMAAAAJ&hl=pt-BR" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://lattes.cnpq.br/9521612341950206" rel="noopener">Currículo Lattes</a></li>
+        <li><a href="https://github.com/rat" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/java/" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documentos legais">
+      <h2>Documentos legais</h2>
+      <ul>
+        <li><a href="/termos.html#privacidade">Política de Privacidade</a></li>
+        <li><a href="/termos.html#termos">Termos de Uso</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Renato Augusto Tavares. Textos e figuras deste site: todos os direitos reservados, salvo indicação em contrário. Preprints e código seguem as licenças indicadas em cada repositório.</p>
+    <p>Este site não usa cookies, não exibe anúncios e não carrega recursos de terceiros.</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=0457d6df1c" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Relatórios internos (auditoria, pendências, fontes): ficam só na máquina local.
+# A hospedagem publica o repositório inteiro, então nada aqui dentro pode ser versionado.
+_relatorios/
+
+node_modules/
+.DS_Store
+*.log
+# ferramentas de assistência de código: não versionar (a raiz do repositório é pública)
+.claude/
+CLAUDE.md

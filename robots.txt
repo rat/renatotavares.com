@@ -1,0 +1,6 @@
+# renatotavares.com
+User-agent: *
+Allow: /
+Disallow: /src/
+
+Sitemap: https://renatotavares.com/sitemap.xml

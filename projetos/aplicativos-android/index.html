@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aplicativos Android que funcionam sem conexão — Renato Augusto Tavares</title>
+  <meta name="description" content="Sete aplicativos Android publicados no Google Play por Renato Augusto Tavares, em Kotlin e Jetpack Compose.">
+  <meta name="author" content="Renato Augusto Tavares">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://renatotavares.com/projetos/aplicativos-android/">
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Renato Augusto Tavares">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Aplicativos Android que funcionam sem conexão">
+  <meta property="og:description" content="Sete aplicativos Android publicados no Google Play por Renato Augusto Tavares, em Kotlin e Jetpack Compose.">
+  <meta property="og:url" content="https://renatotavares.com/projetos/aplicativos-android/">
+  <meta property="og:image" content="https://renatotavares.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renato Augusto Tavares: ciência da computação, matemática computacional e engenharia de software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aplicativos Android que funcionam sem conexão">
+  <meta name="twitter:description" content="Sete aplicativos Android publicados no Google Play por Renato Augusto Tavares, em Kotlin e Jetpack Compose.">
+  <meta name="twitter:image" content="https://renatotavares.com/assets/img/og.png">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="me" href="https://orcid.org/0009-0002-0196-3311">
+  <link rel="me" href="https://github.com/rat">
+  <link rel="alternate" type="application/atom+xml" title="Publicações de Renato Augusto Tavares" href="/publicacoes/feed.xml">
+  <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.className+=' js'})()</script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cc4866218">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://renatotavares.com/"},{"@type":"ListItem","position":2,"name":"Projetos","item":"https://renatotavares.com/projetos/"},{"@type":"ListItem","position":3,"name":"Aplicativos Android","item":"https://renatotavares.com/projetos/aplicativos-android/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Mapa Astral Completo","operatingSystem":"Android","applicationCategory":"Estilo de vida","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.mapaastralcompleto","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Bíblia Católica Offline","operatingSystem":"Android","applicationCategory":"Livros e referências","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.bibliacatolica","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Gerador Números para Loterias","operatingSystem":"Android","applicationCategory":"Ferramentas","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.geradornumerosloterias","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Simulado do Detran","operatingSystem":"Android","applicationCategory":"Educação","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=org.pacote.android.apps.simuladodetran","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Sudoku Offline: Lógica Pura","operatingSystem":"Android","applicationCategory":"Quebra-cabeças","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.sudokuoffline","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Markup: Calculadora de Preços","operatingSystem":"Android","applicationCategory":"Negócios","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.markup","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"Calculadora Financeira","operatingSystem":"Android","applicationCategory":"Finanças","author":{"@type":"Person","name":"Renato Augusto Tavares","url":"https://renatotavares.com/"},"installUrl":"https://play.google.com/store/apps/details?id=com.renatotavares.juroscompostos","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="Renato Augusto Tavares, página inicial"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/" aria-current="page">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li class="nav-lang"><a href="/en/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+      <button class="tool theme-btn" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar entre tema claro e escuro"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor"/></svg></button>
+      <button class="tool menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Fechar">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<header class="page-head is-article"><div class="wrap grid"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/projetos/">Projetos</a></li><li aria-current="page">Aplicativos Android</li></ol></nav><h1>Aplicativos Android que funcionam sem conexão</h1><p class="lede">Sete aplicativos publicados no Google Play. O ponto de partida de todos é o mesmo: o que o usuário digita fica no aparelho dele, e o aplicativo tem de funcionar no ônibus, no avião e na roça.</p></div></header><div class="article"><div class="wrap grid"><aside class="article-side"><dl class="kv"><dt>Plataforma</dt><dd>Android, Google Play</dd><dt>Papel</dt><dd>Projeto, desenvolvimento e publicação</dd><dt>Tecnologias</dt><dd>Kotlin, Jetpack Compose, Room, DataStore, Hilt, WorkManager; um app em Java</dd><dt>Privacidade</dt><dd><a href="/termos.html#aplicativos">O que cada aplicativo faz com os dados</a></dd></dl><h2 id="toc-h">Nesta página</h2><nav class="toc" aria-labelledby="toc-h"><ol><li><a href="#abordagem">Abordagem</a></li><li><a href="#aplicativos">Os sete aplicativos</a></li><li><a href="#detalhes">Dois detalhes de engenharia</a></li><li><a href="#anuncios">Anúncios e dados</a></li></ol></nav></aside><div class="article-main"><div class="prose ">
+<h2 id="abordagem">Abordagem</h2>
+<p>Nenhum destes aplicativos tem cadastro, login ou servidor meu por trás. Os dados são gravados em um banco local (Room) e as preferências em DataStore; a única cópia fora do aparelho é a do backup do próprio Android, na conta do usuário, quando ele o mantém ativado. Três dos sete não declaram sequer a permissão de acesso à internet, de modo que “offline” não é uma promessa da descrição: é uma propriedade que o sistema operacional garante.</p>
+<p>A interface é escrita em Jetpack Compose, com injeção de dependências por Hilt nos aplicativos maiores. Um deles, o simulado de placas de trânsito, é em Java com Views.</p>
+</div><div class="shots"><img src="/assets/img/apps/sudoku-1-360.webp" srcset="/assets/img/apps/sudoku-1-360.webp 360w, /assets/img/apps/sudoku-1-720.webp 720w" sizes="(max-width: 54rem) 30vw, 14rem" width="360" height="640" loading="lazy" decoding="async" alt="Tela de jogo do Sudoku Offline, com o tabuleiro 9×9, contador de erros e teclado numérico"><img src="/assets/img/apps/sudoku-2-360.webp" srcset="/assets/img/apps/sudoku-2-360.webp 360w, /assets/img/apps/sudoku-2-720.webp 720w" sizes="(max-width: 54rem) 30vw, 14rem" width="360" height="640" loading="lazy" decoding="async" alt="Dica do Sudoku Offline explicando a técnica Hidden Single"><img src="/assets/img/apps/sudoku-3-360.webp" srcset="/assets/img/apps/sudoku-3-360.webp 360w, /assets/img/apps/sudoku-3-720.webp 720w" sizes="(max-width: 54rem) 30vw, 14rem" width="360" height="640" loading="lazy" decoding="async" alt="Tela inicial do Sudoku Offline com desafio do dia e outros modos de jogo"></div><div class="prose "><h2 id="aplicativos">Os sete aplicativos</h2></div><ul class="chrono"><li><p class="chrono-when">Estilo de vida<br>versão 1.0.2</p><div><h3>Mapa Astral Completo</h3><p class="role">Kotlin, Jetpack Compose, Room, Hilt. Com anúncios</p><p>Mapa natal com análise tradicional, trânsitos diários, sinastria e exportação em PDF. O cálculo usa efemérides embarcadas e uma base de cidades offline.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.mapaastralcompleto">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Livros e referências<br>versão 1.4</p><div><h3>Bíblia Católica Offline</h3><p class="role">Kotlin, Jetpack Compose, Room. Com anúncios</p><p>Bíblia católica completa para leitura offline, com versículo do dia, favoritos e compartilhamento de versículos como imagem.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.bibliacatolica">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Ferramentas<br>versão 1.1.1</p><div><h3>Gerador Números para Loterias</h3><p class="role">Kotlin, Jetpack Compose, Room, Retrofit, WorkManager. Com anúncios</p><p>Gera combinações para dez loterias com 25 estratégias, confere resultados e mostra estatísticas dos sorteios.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.geradornumerosloterias">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Educação<br>versão 1.5</p><div><h3>Simulado do Detran</h3><p class="role">Java, Room, MPAndroidChart. Com anúncios</p><p>Estudo e simulados de placas de trânsito brasileiras, com estatísticas de acertos.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=org.pacote.android.apps.simuladodetran">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Quebra-cabeças<br>versão 1.0</p><div><h3>Sudoku Offline: Lógica Pura</h3><p class="role">Kotlin, Jetpack Compose, Room, DataStore. Sem anúncios e sem acesso à internet</p><p>Sudoku clássico 9×9 com geração de tabuleiros no aparelho, sete níveis, oito modos, desafio diário e dicas que explicam o raciocínio.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.sudokuoffline">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Negócios<br>versão 1.0</p><div><h3>Markup: Calculadora de Preços</h3><p class="role">Kotlin, Jetpack Compose, Room, Hilt. Sem anúncios e sem acesso à internet</p><p>Cálculo de preço de venda para MEIs e vendedores de marketplace, com histórico e cenários salvos.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.markup">Ver no Google Play</a></p></div></li><li><p class="chrono-when">Finanças<br>versão 1.0</p><div><h3>Calculadora Financeira</h3><p class="role">Kotlin, Jetpack Compose. Sem anúncios e sem acesso à internet</p><p>Três calculadoras: juros compostos, tempo até o primeiro milhão e comparação entre alugar e financiar.</p><p class="note"><a class="ext" href="https://play.google.com/store/apps/details?id=com.renatotavares.juroscompostos">Ver no Google Play</a></p></div></li></ul><div class="prose ">
+<h2 id="detalhes">Dois detalhes de engenharia</h2>
+<h3>Tabuleiros gerados no aparelho</h3>
+<p>O Sudoku não traz uma lista de tabuleiros prontos. Cada partida é gerada no próprio dispositivo, em sete níveis de dificuldade, e as dicas não entregam o número: explicam qual técnica de resolução se aplica àquela casa e por quê.</p>
+<h3>Astronomia sem rede</h3>
+<p>O Mapa Astral precisa da posição dos astros em um instante e lugar quaisquer. Em vez de consultar um serviço, o aplicativo embarca as efemérides (Swiss Ephemeris) e uma base de cerca de 167 mil cidades (GeoNames, CC BY 4.0), com coordenadas e fuso horário. O cálculo, a busca de cidades e os textos de interpretação funcionam em modo avião.</p>
+</div><div class="shots"><img src="/assets/img/apps/markup-1-360.webp" srcset="/assets/img/apps/markup-1-360.webp 360w, /assets/img/apps/markup-1-720.webp 720w" sizes="(max-width: 54rem) 45vw, 14rem" width="360" height="800" loading="lazy" decoding="async" alt="Tela do Markup com os campos de custo, taxas e margem e o preço de venda calculado"><img src="/assets/img/apps/markup-2-360.webp" srcset="/assets/img/apps/markup-2-360.webp 360w, /assets/img/apps/markup-2-720.webp 720w" sizes="(max-width: 54rem) 45vw, 14rem" width="360" height="800" loading="lazy" decoding="async" alt="Tela do Markup com a comissão e a taxa fixa de um anúncio de marketplace"></div><div class="prose ">
+<h2 id="anuncios">Anúncios e dados</h2>
+<p>Quatro dos sete aplicativos exibem anúncios do Google AdMob; os outros três não têm anúncios nem acesso à rede. Nos que têm, o SDK do Google trata dados do aparelho para veicular e medir os anúncios, e isso está descrito, aplicativo por aplicativo, na <a href="/termos.html#aplicativos">Política de Privacidade</a>. O que você digita nos aplicativos não é enviado a mim nem repassado ao sistema de anúncios.</p>
+</div><nav class="pager" aria-label="Projetos"><a href="/projetos/"><span>Voltar</span>Todos os projetos</a></nav></div></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-name"><svg class="mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></p>
+      <p>Ciência da computação, matemática computacional e engenharia de software. Goiânia, Brasil.</p>
+      <p><a href="mailto:dr.renatotavares@gmail.com">dr.renatotavares@gmail.com</a></p>
+    </div>
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Perfis">
+      <h2>Perfis</h2>
+      <ul>
+        <li><a href="https://orcid.org/0009-0002-0196-3311" rel="me noopener">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5L2RbhMAAAAJ&hl=pt-BR" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://lattes.cnpq.br/9521612341950206" rel="noopener">Currículo Lattes</a></li>
+        <li><a href="https://github.com/rat" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/java/" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documentos legais">
+      <h2>Documentos legais</h2>
+      <ul>
+        <li><a href="/termos.html#privacidade">Política de Privacidade</a></li>
+        <li><a href="/termos.html#termos">Termos de Uso</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Renato Augusto Tavares. Textos e figuras deste site: todos os direitos reservados, salvo indicação em contrário. Preprints e código seguem as licenças indicadas em cada repositório.</p>
+    <p>Este site não usa cookies, não exibe anúncios e não carrega recursos de terceiros.</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=0457d6df1c" defer></script>
+
+</body>
+</html>

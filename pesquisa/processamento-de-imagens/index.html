@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Processamento de imagens e visão computacional — Renato Augusto Tavares</title>
+  <meta name="description" content="Linha de pesquisa do mestrado em Processamento Digital de Imagens na UFG. Estudo experimental sobre pré-processamento de imagens para OCR de placas veiculares…">
+  <meta name="author" content="Renato Augusto Tavares">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://renatotavares.com/pesquisa/processamento-de-imagens/">
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Renato Augusto Tavares">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Processamento de imagens e visão computacional">
+  <meta property="og:description" content="Linha de pesquisa do mestrado em Processamento Digital de Imagens na UFG. Estudo experimental sobre pré-processamento de imagens para OCR de placas veiculares…">
+  <meta property="og:url" content="https://renatotavares.com/pesquisa/processamento-de-imagens/">
+  <meta property="og:image" content="https://renatotavares.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renato Augusto Tavares: ciência da computação, matemática computacional e engenharia de software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Processamento de imagens e visão computacional">
+  <meta name="twitter:description" content="Linha de pesquisa do mestrado em Processamento Digital de Imagens na UFG. Estudo experimental sobre pré-processamento de imagens para OCR de placas veiculares…">
+  <meta name="twitter:image" content="https://renatotavares.com/assets/img/og.png">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="me" href="https://orcid.org/0009-0002-0196-3311">
+  <link rel="me" href="https://github.com/rat">
+  <link rel="alternate" type="application/atom+xml" title="Publicações de Renato Augusto Tavares" href="/publicacoes/feed.xml">
+  <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.className+=' js'})()</script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cc4866218">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://renatotavares.com/"},{"@type":"ListItem","position":2,"name":"Pesquisa","item":"https://renatotavares.com/pesquisa/"},{"@type":"ListItem","position":3,"name":"Processamento de imagens","item":"https://renatotavares.com/pesquisa/processamento-de-imagens/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="Renato Augusto Tavares, página inicial"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="/pesquisa/" aria-current="page">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li class="nav-lang"><a href="/en/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+      <button class="tool theme-btn" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar entre tema claro e escuro"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor"/></svg></button>
+      <button class="tool menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Fechar">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<header class="page-head is-article"><div class="wrap grid"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/pesquisa/">Pesquisa</a></li><li aria-current="page">Processamento de imagens</li></ol></nav><h1>Processamento de imagens e visão computacional</h1><p class="lede">Faço mestrado em Processamento Digital de Imagens no Instituto de Informática da UFG. O trabalho público desta linha é um estudo sobre o que fazer com uma imagem antes de entregá-la a um OCR, e a resposta foi: neste caso, nada.</p></div></header><div class="article"><div class="wrap grid"><aside class="article-side">
+  <dl class="kv">
+    <dt>Situação</dt><dd>Preprint, outubro de 2024. Sem revisão por pares.</dd>
+    <dt>Área</dt><dd>Visão computacional, processamento digital de imagens</dd>
+    <dt>Publicações</dt><dd><a href="/publicacoes/pre-processamento-para-ocr-de-placas/">Preprint (arXiv)</a></dd>
+    <dt>Código e dados</dt><dd><a href="https://github.com/faculdade/projeto-final-pdi">GitHub</a></dd>
+  </dl>
+  <h2 id="toc-h">Nesta página</h2><nav class="toc" aria-labelledby="toc-h"><ol><li><a href="#pergunta">A pergunta</a></li><li><a href="#experimento">O experimento</a></li><li><a href="#resultados">Resultados</a></li><li><a href="#adiante">Adiante</a></li></ol></nav></aside><div class="article-main"><div class="prose ">
+<h2 id="pergunta">A pergunta</h2>
+<p>É prática comum tratar a imagem antes do reconhecimento de caracteres: converter para tons de cinza, equalizar o contraste, suavizar o ruído. A justificativa é razoável, porque fotos de placas têm iluminação ruim, baixa resolução e distorção de perspectiva. A pergunta do estudo é se essa etapa ainda ajuda quando o OCR é um modelo moderno de aprendizado profundo, que já aprendeu a lidar com imagens imperfeitas.</p>
+
+<h2 id="experimento">O experimento</h2>
+<p>O estudo começa com uma revisão sistemática da literatura na IEEE Digital Library, que partiu de 190 artigos e analisou 146 depois dos critérios de exclusão e da remoção de duplicatas. Em seguida, avalia quatro condições sobre um conjunto de imagens de placas veiculares brasileiras, usando o EasyOCR: nenhuma etapa de pré-processamento, conversão para escala de cinza, equalização adaptativa de histograma (CLAHE) aplicada em RGB e filtro bilateral. Cada técnica é medida isoladamente e em combinação, com acurácia, precisão, recall, F1, curva ROC, AUC, análise de variância e tempo de execução.</p>
+<p>O notebook, as imagens e os resultados brutos de cada condição estão no repositório, de modo que as tabelas do artigo podem ser refeitas.</p>
+
+<h2 id="resultados">Resultados</h2>
+</div><div class="claims"><div class="claim"><p class="claim-k"><span class="st st-comp" aria-hidden="true"></span><span>Evidência computacional</span></p><div class="claim-b"><p>Nenhuma das técnicas de pré-processamento superou a linha de base. Sem pré-processamento, a acurácia foi de <strong>71,7%</strong>; com escala de cinza, CLAHE ou filtro bilateral, caiu para <strong>70,75%</strong> nos três casos.</p><p class="src">arXiv:2410.13622, conclusão; conjunto de placas brasileiras, EasyOCR</p></div></div><div class="claim"><p class="claim-k"><span class="st st-comp" aria-hidden="true"></span><span>Evidência computacional</span></p><div class="claim-b"><p>O pré-processamento aumentou o tempo médio de processamento em relação aos 7,26 segundos da linha de base.</p></div></div><div class="claim"><p class="claim-k"><span class="st st-open" aria-hidden="true"></span><span>Em aberto</span></p><div class="claim-b"><p>Se a conclusão se mantém em outros conjuntos de dados, com outras condições de captura e outros motores de OCR. O estudo usa um conjunto e um motor.</p></div></div></div><div class="prose ">
+<p>É um resultado negativo, e por isso útil: uma etapa que custa tempo e não melhora o reconhecimento pode ser retirada do pipeline. A leitura que o artigo propõe é que o modelo de OCR já é robusto às imperfeições que essas técnicas tentam corrigir, e que em alguns casos elas introduzem artefatos que atrapalham.</p>
+
+<h2 id="adiante">Adiante</h2>
+<p>Minha formação anterior em aprendizado de máquina vem da especialização em Banco de Dados com ênfase em Big Data, também na UFG, concluída com um trabalho sobre previsão de vendas a partir de séries históricas.</p>
+<p>Os temas de aplicação que me interessam em visão computacional, como agricultura de precisão, sensoriamento remoto, imagens médicas e sistemas autônomos, ainda não têm resultados publicados meus. Quando tiverem, aparecem aqui com a mesma classificação usada no restante da seção.</p>
+</div><nav class="pager" aria-label="Outras linhas de pesquisa"><a href="/pesquisa/expoente-5x-mais-1/"><span>Anterior</span>O expoente do mapa 5x+1</a><a href="/pesquisa/metodo/"><span>Seguinte</span>Método</a></nav></div></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-name"><svg class="mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></p>
+      <p>Ciência da computação, matemática computacional e engenharia de software. Goiânia, Brasil.</p>
+      <p><a href="mailto:dr.renatotavares@gmail.com">dr.renatotavares@gmail.com</a></p>
+    </div>
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Perfis">
+      <h2>Perfis</h2>
+      <ul>
+        <li><a href="https://orcid.org/0009-0002-0196-3311" rel="me noopener">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5L2RbhMAAAAJ&hl=pt-BR" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://lattes.cnpq.br/9521612341950206" rel="noopener">Currículo Lattes</a></li>
+        <li><a href="https://github.com/rat" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/java/" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documentos legais">
+      <h2>Documentos legais</h2>
+      <ul>
+        <li><a href="/termos.html#privacidade">Política de Privacidade</a></li>
+        <li><a href="/termos.html#termos">Termos de Uso</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Renato Augusto Tavares. Textos e figuras deste site: todos os direitos reservados, salvo indicação em contrário. Preprints e código seguem as licenças indicadas em cada repositório.</p>
+    <p>Este site não usa cookies, não exibe anúncios e não carrega recursos de terceiros.</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=0457d6df1c" defer></script>
+
+</body>
+</html>

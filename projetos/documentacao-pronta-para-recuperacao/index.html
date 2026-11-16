@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentação escrita para ser recuperada — Renato Augusto Tavares</title>
+  <meta name="description" content="Um pipeline de RAG híbrido para a documentação de um ERP brasileiro (473 documentos, 4,1 milhões de tokens), em que o contrato de escrita da documentação e o…">
+  <meta name="author" content="Renato Augusto Tavares">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://renatotavares.com/projetos/documentacao-pronta-para-recuperacao/">
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Renato Augusto Tavares">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Documentação escrita para ser recuperada">
+  <meta property="og:description" content="Um pipeline de RAG híbrido para a documentação de um ERP brasileiro (473 documentos, 4,1 milhões de tokens), em que o contrato de escrita da documentação e o…">
+  <meta property="og:url" content="https://renatotavares.com/projetos/documentacao-pronta-para-recuperacao/">
+  <meta property="og:image" content="https://renatotavares.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renato Augusto Tavares: ciência da computação, matemática computacional e engenharia de software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Documentação escrita para ser recuperada">
+  <meta name="twitter:description" content="Um pipeline de RAG híbrido para a documentação de um ERP brasileiro (473 documentos, 4,1 milhões de tokens), em que o contrato de escrita da documentação e o…">
+  <meta name="twitter:image" content="https://renatotavares.com/assets/img/og.png">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="me" href="https://orcid.org/0009-0002-0196-3311">
+  <link rel="me" href="https://github.com/rat">
+  <link rel="alternate" type="application/atom+xml" title="Publicações de Renato Augusto Tavares" href="/publicacoes/feed.xml">
+  <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.className+=' js'})()</script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cc4866218">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://renatotavares.com/"},{"@type":"ListItem","position":2,"name":"Projetos","item":"https://renatotavares.com/projetos/"},{"@type":"ListItem","position":3,"name":"Documentação para recuperação","item":"https://renatotavares.com/projetos/documentacao-pronta-para-recuperacao/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="Renato Augusto Tavares, página inicial"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/" aria-current="page">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li class="nav-lang"><a href="/en/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+      <button class="tool theme-btn" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar entre tema claro e escuro"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor"/></svg></button>
+      <button class="tool menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Fechar">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<header class="page-head is-article"><div class="wrap grid"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/projetos/">Projetos</a></li><li aria-current="page">Documentação para recuperação</li></ol></nav><h1>Documentação escrita para ser recuperada</h1><p class="lede">Um sistema que responde perguntas de suporte sobre a documentação de um ERP. A ideia central é simples: se quem escreve a documentação é um modelo de linguagem seguindo um contrato, o mecanismo de busca pode contar com a estrutura que o contrato garante.</p></div></header><div class="article"><div class="wrap grid"><aside class="article-side"><dl class="kv"><dt>Situação</dt><dd>Em produção; manuscrito concluído, ainda sem identificador de preprint</dd><dt>Papel</dt><dd>Autor: arquitetura, implementação e avaliação</dd><dt>Tecnologias</dt><dd>Python, PostgreSQL 18, pgvector, busca textual, LangGraph, GitHub Actions</dd><dt>Corpus</dt><dd>473 documentos, 4,1 milhões de tokens, em português</dd><dt>Código e dados</dt><dd><a href="https://github.com/faculdade/docs-designed-for-retrieval">GitHub</a> (MIT)</dd></dl><h2 id="toc-h">Nesta página</h2><nav class="toc" aria-labelledby="toc-h"><ol><li><a href="#contrato">O contrato de documentação</a></li><li><a href="#busca">A busca</a></li><li><a href="#medir">Como medir</a></li><li><a href="#resultados">O que os números dizem</a></li><li><a href="#limites">Limites</a></li></ol></nav></aside><div class="article-main"><div class="prose ">
+<h2 id="contrato">O contrato de documentação</h2>
+<p>O corpus é a documentação de um ERP brasileiro com cerca de 270 telas: 473 documentos em português, de telas, relatórios, regras de negócio, integrações e estruturas de dados. Ela é gerada por um modelo de linguagem a partir do código-fonte do produto, e regenerada por integração contínua a cada versão.</p>
+<p>O modelo escreve sob um <em>contrato</em>: todo documento tem os mesmos campos de cabeçalho, as mensagens de erro aparecem em tabelas com o texto exato que o sistema exibe, as permissões têm formato fixo, e há mais de mil pares de pergunta e resposta frequentes. O contrato existe para o leitor humano, mas dá ao buscador algo raro em documentação: estrutura em que se pode confiar.</p>
+
+<h2 id="busca">A busca</h2>
+<p>Tudo roda em uma única instância de PostgreSQL, com busca vetorial (pgvector, índice HNSW) e busca textual lado a lado. Os documentos são divididos em seis tipos de trecho, cerca de 39,7 mil no total: seções, linhas de tabela, mensagens, permissões, perguntas frequentes e resumos.</p>
+<ul>
+  <li><strong>Atalhos de correspondência exata.</strong> Se a pergunta contém uma mensagem de erro ou um nome de permissão que existe nas tabelas, a resposta vem delas, sem passar pela busca semântica.</li>
+  <li><strong>Busca híbrida.</strong> Cinquenta candidatos da busca densa e cinquenta da lexical, combinados por fusão de postos recíprocos.</li>
+  <li><strong>Reordenação</strong> por um modelo cross-encoder.</li>
+  <li><strong>Expansão para a seção-mãe</strong>, para que a resposta seja escrita com o contexto inteiro e não com um fragmento.</li>
+</ul>
+
+<h2 id="medir">Como medir</h2>
+<p>O mapa da documentação fornece pares de pergunta e documento correto, separados em um conjunto de desenvolvimento (929 perguntas) e um de teste (214), que não é usado para ajustar nada. Como essas perguntas reutilizam o vocabulário dos documentos, há um terceiro conjunto, de 214 paráfrases em linguagem coloquial, e conjuntos operacionais com mensagens de erro coladas.</p>
+<p>Cada componente do pipeline foi removido em uma ablação, e 23 modelos de embedding foram comparados sob o mesmo protocolo. Todos os números do manuscrito estão mapeados, em um arquivo do repositório, para o arquivo e o campo de onde saíram, e um script confere os que podem ser conferidos.</p>
+</div><figure class="fig " id="fig-1"><div class="fig-scroll" tabindex="0" role="group" aria-label="Figura (role na horizontal em telas estreitas)"><svg class="chart" viewBox="0 0 720 478" role="img" aria-labelledby="fr-t fr-d"><title id="fr-t">Recall@10 de 24 configurações de embedding: perguntas literais contra paráfrases</title><desc id="fr-d">Nas perguntas literais, todos os modelos ficam entre 0,98 e 1,00. Nas paráfrases, o recall varia de 0,52 a 0,89.</desc><line class="grid" x1="232" x2="232" y1="24" y2="442"/><text class="ax" x="232" y="458" text-anchor="middle">0,5</text><line class="grid" x1="324.4" x2="324.4" y1="24" y2="442"/><text class="ax" x="324.4" y="458" text-anchor="middle">0,6</text><line class="grid" x1="416.8" x2="416.8" y1="24" y2="442"/><text class="ax" x="416.8" y="458" text-anchor="middle">0,7</text><line class="grid" x1="509.2" x2="509.2" y1="24" y2="442"/><text class="ax" x="509.2" y="458" text-anchor="middle">0,8</text><line class="grid" x1="601.6" x2="601.6" y1="24" y2="442"/><text class="ax" x="601.6" y="458" text-anchor="middle">0,9</text><line class="grid" x1="694" x2="694" y1="24" y2="442"/><text class="ax" x="694" y="458" text-anchor="middle">1,0</text>
+<circle class="pt" cx="232" cy="12" r="3.4"/><text class="ax" x="241" y="16">paráfrases</text><circle class="pt pt-open" cx="328" cy="12" r="3"/><text class="ax" x="337" y="16">perguntas literais</text>
+<text class="ax" x="220" y="42.5" text-anchor="end">gte-multilingual-base</text><line class="rd" x1="590.42" x2="689.66" y1="38.5" y2="38.5"/><circle class="pt" cx="590.42" cy="38.5" r="3.4"><title>gte-multilingual-base: recall@10 de 0,888 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="38.5" r="3"><title>gte-multilingual-base: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="59.5" text-anchor="end">voyage-3-large</text><line class="rd" x1="590.42" x2="689.66" y1="55.5" y2="55.5"/><circle class="pt" cx="590.42" cy="55.5" r="3.4"><title>voyage-3-large: recall@10 de 0,888 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="55.5" r="3"><title>voyage-3-large: recall@10 de 0,995 nas perguntas literais</title></circle><text class="lb" x="220" y="76.5" text-anchor="end">pipeline em produção</text><line class="rd" x1="577.39" x2="694" y1="72.5" y2="72.5"/><circle class="pt" cx="577.39" cy="72.5" r="4.6"><title>pipeline em produção: recall@10 de 0,874 nas paráfrases</title></circle><circle class="pt pt-open" cx="694" cy="72.5" r="3"><title>pipeline em produção: recall@10 de 1,000 nas perguntas literais</title></circle><text class="ax" x="220" y="93.5" text-anchor="end">octen-embedding-0.6b</text><line class="rd" x1="564.46" x2="689.66" y1="89.5" y2="89.5"/><circle class="pt" cx="564.46" cy="89.5" r="3.4"><title>octen-embedding-0.6b: recall@10 de 0,860 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="89.5" r="3"><title>octen-embedding-0.6b: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="110.5" text-anchor="end">voyage-context-4</text><line class="rd" x1="564.46" x2="694" y1="106.5" y2="106.5"/><circle class="pt" cx="564.46" cy="106.5" r="3.4"><title>voyage-context-4: recall@10 de 0,860 nas paráfrases</title></circle><circle class="pt pt-open" cx="694" cy="106.5" r="3"><title>voyage-context-4: recall@10 de 1,000 nas perguntas literais</title></circle><text class="ax" x="220" y="127.5" text-anchor="end">voyage-4-large</text><line class="rd" x1="560.11" x2="689.66" y1="123.5" y2="123.5"/><circle class="pt" cx="560.11" cy="123.5" r="3.4"><title>voyage-4-large: recall@10 de 0,855 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="123.5" r="3"><title>voyage-4-large: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="144.5" text-anchor="end">gemini-embedding-2</text><line class="rd" x1="551.52" x2="681.06" y1="140.5" y2="140.5"/><circle class="pt" cx="551.52" cy="140.5" r="3.4"><title>gemini-embedding-2: recall@10 de 0,846 nas paráfrases</title></circle><circle class="pt pt-open" cx="681.06" cy="140.5" r="3"><title>gemini-embedding-2: recall@10 de 0,986 nas perguntas literais</title></circle><text class="ax" x="220" y="161.5" text-anchor="end">granite-embedding-311m-r2</text><line class="rd" x1="551.52" x2="689.66" y1="157.5" y2="157.5"/><circle class="pt" cx="551.52" cy="157.5" r="3.4"><title>granite-embedding-311m-r2: recall@10 de 0,846 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="157.5" r="3"><title>granite-embedding-311m-r2: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="178.5" text-anchor="end">serafim-900m-ir</text><line class="rd" x1="551.52" x2="694" y1="174.5" y2="174.5"/><circle class="pt" cx="551.52" cy="174.5" r="3.4"><title>serafim-900m-ir: recall@10 de 0,846 nas paráfrases</title></circle><circle class="pt pt-open" cx="694" cy="174.5" r="3"><title>serafim-900m-ir: recall@10 de 1,000 nas perguntas literais</title></circle><text class="ax" x="220" y="195.5" text-anchor="end">kalm-embedding-mini-v1.5</text><line class="rd" x1="534.24" x2="689.66" y1="191.5" y2="191.5"/><circle class="pt" cx="534.24" cy="191.5" r="3.4"><title>kalm-embedding-mini-v1.5: recall@10 de 0,827 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="191.5" r="3"><title>kalm-embedding-mini-v1.5: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="212.5" text-anchor="end">qwen3-embedding-0.6b</text><line class="rd" x1="525.65" x2="689.66" y1="208.5" y2="208.5"/><circle class="pt" cx="525.65" cy="208.5" r="3.4"><title>qwen3-embedding-0.6b: recall@10 de 0,818 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="208.5" r="3"><title>qwen3-embedding-0.6b: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="229.5" text-anchor="end">qwen3-embedding-4b</text><line class="rd" x1="508.37" x2="685.41" y1="225.5" y2="225.5"/><circle class="pt" cx="508.37" cy="225.5" r="3.4"><title>qwen3-embedding-4b: recall@10 de 0,799 nas paráfrases</title></circle><circle class="pt pt-open" cx="685.41" cy="225.5" r="3"><title>qwen3-embedding-4b: recall@10 de 0,991 nas perguntas literais</title></circle><text class="ax" x="220" y="246.5" text-anchor="end">multilingual-e5-large-instruct</text><line class="rd" x1="504.03" x2="689.66" y1="242.5" y2="242.5"/><circle class="pt" cx="504.03" cy="242.5" r="3.4"><title>multilingual-e5-large-instruct: recall@10 de 0,794 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="242.5" r="3"><title>multilingual-e5-large-instruct: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="263.5" text-anchor="end">embeddinggemma-300m</text><line class="rd" x1="499.68" x2="689.66" y1="259.5" y2="259.5"/><circle class="pt" cx="499.68" cy="259.5" r="3.4"><title>embeddinggemma-300m: recall@10 de 0,790 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="259.5" r="3"><title>embeddinggemma-300m: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="280.5" text-anchor="end">multilingual-e5-base</text><line class="rd" x1="495.34" x2="681.06" y1="276.5" y2="276.5"/><circle class="pt" cx="495.34" cy="276.5" r="3.4"><title>multilingual-e5-base: recall@10 de 0,785 nas paráfrases</title></circle><circle class="pt pt-open" cx="681.06" cy="276.5" r="3"><title>multilingual-e5-base: recall@10 de 0,986 nas perguntas literais</title></circle><text class="ax" x="220" y="297.5" text-anchor="end">gemini-embedding-001</text><line class="rd" x1="478.15" x2="676.72" y1="293.5" y2="293.5"/><circle class="pt" cx="478.15" cy="293.5" r="3.4"><title>gemini-embedding-001: recall@10 de 0,766 nas paráfrases</title></circle><circle class="pt pt-open" cx="676.72" cy="293.5" r="3"><title>gemini-embedding-001: recall@10 de 0,981 nas perguntas literais</title></circle><text class="ax" x="220" y="314.5" text-anchor="end">bge-m3</text><line class="rd" x1="460.87" x2="685.41" y1="310.5" y2="310.5"/><circle class="pt" cx="460.87" cy="310.5" r="3.4"><title>bge-m3: recall@10 de 0,748 nas paráfrases</title></circle><circle class="pt pt-open" cx="685.41" cy="310.5" r="3"><title>bge-m3: recall@10 de 0,991 nas perguntas literais</title></circle><text class="ax" x="220" y="331.5" text-anchor="end">snowflake-arctic-embed-l-v2.0</text><line class="rd" x1="456.53" x2="676.72" y1="327.5" y2="327.5"/><circle class="pt" cx="456.53" cy="327.5" r="3.4"><title>snowflake-arctic-embed-l-v2.0: recall@10 de 0,743 nas paráfrases</title></circle><circle class="pt pt-open" cx="676.72" cy="327.5" r="3"><title>snowflake-arctic-embed-l-v2.0: recall@10 de 0,981 nas perguntas literais</title></circle><text class="ax" x="220" y="348.5" text-anchor="end">f2llm-v2-4b</text><line class="rd" x1="434.91" x2="689.66" y1="344.5" y2="344.5"/><circle class="pt" cx="434.91" cy="344.5" r="3.4"><title>f2llm-v2-4b: recall@10 de 0,720 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="344.5" r="3"><title>f2llm-v2-4b: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="365.5" text-anchor="end">jina-embeddings-v3</text><line class="rd" x1="430.66" x2="681.06" y1="361.5" y2="361.5"/><circle class="pt" cx="430.66" cy="361.5" r="3.4"><title>jina-embeddings-v3: recall@10 de 0,715 nas paráfrases</title></circle><circle class="pt pt-open" cx="681.06" cy="361.5" r="3"><title>jina-embeddings-v3: recall@10 de 0,986 nas perguntas literais</title></circle><text class="ax" x="220" y="382.5" text-anchor="end">nomic-embed-text-v2-moe</text><line class="rd" x1="426.32" x2="676.72" y1="378.5" y2="378.5"/><circle class="pt" cx="426.32" cy="378.5" r="3.4"><title>nomic-embed-text-v2-moe: recall@10 de 0,710 nas paráfrases</title></circle><circle class="pt pt-open" cx="676.72" cy="378.5" r="3"><title>nomic-embed-text-v2-moe: recall@10 de 0,981 nas perguntas literais</title></circle><text class="ax" x="220" y="399.5" text-anchor="end">multilingual-e5-large</text><line class="rd" x1="417.63" x2="681.06" y1="395.5" y2="395.5"/><circle class="pt" cx="417.63" cy="395.5" r="3.4"><title>multilingual-e5-large: recall@10 de 0,701 nas paráfrases</title></circle><circle class="pt pt-open" cx="681.06" cy="395.5" r="3"><title>multilingual-e5-large: recall@10 de 0,986 nas perguntas literais</title></circle><text class="ax" x="220" y="416.5" text-anchor="end">f2llm-v2-0.6b</text><line class="rd" x1="396.1" x2="689.66" y1="412.5" y2="412.5"/><circle class="pt" cx="396.1" cy="412.5" r="3.4"><title>f2llm-v2-0.6b: recall@10 de 0,678 nas paráfrases</title></circle><circle class="pt pt-open" cx="689.66" cy="412.5" r="3"><title>f2llm-v2-0.6b: recall@10 de 0,995 nas perguntas literais</title></circle><text class="ax" x="220" y="433.5" text-anchor="end">paraphrase-multilingual-mpnet</text><line class="rd" x1="249.28" x2="685.41" y1="429.5" y2="429.5"/><circle class="pt" cx="249.28" cy="429.5" r="3.4"><title>paraphrase-multilingual-mpnet: recall@10 de 0,519 nas paráfrases</title></circle><circle class="pt pt-open" cx="685.41" cy="429.5" r="3"><title>paraphrase-multilingual-mpnet: recall@10 de 0,991 nas perguntas literais</title></circle>
+<text class="ax" x="463" y="474" text-anchor="middle">recall@10 (fração das perguntas cujo documento certo aparece entre os dez primeiros)</text></svg></div><figcaption><b>Figura 1.</b> Recall@10 de 23 modelos de embedding e do pipeline em produção, com o mesmo reordenador. Nas perguntas literais (círculos vazados) todos parecem perfeitos; são as paráfrases (círculos cheios) que os separam. Um conjunto de teste que só repete o vocabulário dos documentos mediria quase nada. Dados: arquivo <code>recall-por-modelo.csv</code> do repositório público.</figcaption></figure><div class="prose ">
+<h2 id="resultados">O que os números dizem</h2>
+<ul>
+  <li>No conjunto de teste literal, o pipeline completo encontra o documento certo entre os dez primeiros em todas as 214 perguntas (recall@10 de 1,000; MRR de 0,927).</li>
+  <li>Nas paráfrases, o recall@10 cai para 0,874. É o número que descreve melhor o uso real.</li>
+  <li>A busca lexical sozinha vai muito bem nas perguntas literais (0,981) e desaba nas paráfrases (0,16). A busca densa sozinha perde o documento em 26 das 214 perguntas literais. Nenhuma das duas basta.</li>
+  <li>As tabelas de correspondência exata valem de 14 a 18 pontos de recall quando o usuário cola uma mensagem de erro: de 0,82 e 0,86 para 1,00.</li>
+  <li>A reescrita da pergunta por um modelo de linguagem, técnica comum em sistemas desse tipo, <strong>piorou</strong> o resultado: de 1,000 para algo entre 0,907 e 0,916 no conjunto literal, e de 0,874 para 0,855 nas paráfrases.</li>
+</ul>
+
+<h2 id="limites">Limites</h2>
+<p>O repositório público contém o pacote de recuperação que está em produção, os conjuntos de referência, os resultados arquivados e um subconjunto de 30 documentos, suficiente para rodar a ingestão e a avaliação de ponta a ponta. Os outros 443 documentos e o texto integral do contrato pertencem ao fornecedor do ERP e não foram publicados; o nome do produto foi substituído por termos genéricos em todos os arquivos.</p>
+<p>As 62 perguntas reais de clientes coletadas nos primeiros dias de uso não estão rotuladas e não entram em nenhuma métrica. O sistema foi medido em um corpus e em um idioma, e o manuscrito distingue três níveis de reprodutibilidade para dizer o que um leitor externo consegue refazer.</p>
+</div><nav class="pager" aria-label="Projetos"><a href="/projetos/"><span>Voltar</span>Todos os projetos</a></nav></div></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-name"><svg class="mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></p>
+      <p>Ciência da computação, matemática computacional e engenharia de software. Goiânia, Brasil.</p>
+      <p><a href="mailto:dr.renatotavares@gmail.com">dr.renatotavares@gmail.com</a></p>
+    </div>
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Perfis">
+      <h2>Perfis</h2>
+      <ul>
+        <li><a href="https://orcid.org/0009-0002-0196-3311" rel="me noopener">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5L2RbhMAAAAJ&hl=pt-BR" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://lattes.cnpq.br/9521612341950206" rel="noopener">Currículo Lattes</a></li>
+        <li><a href="https://github.com/rat" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/java/" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documentos legais">
+      <h2>Documentos legais</h2>
+      <ul>
+        <li><a href="/termos.html#privacidade">Política de Privacidade</a></li>
+        <li><a href="/termos.html#termos">Termos de Uso</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Renato Augusto Tavares. Textos e figuras deste site: todos os direitos reservados, salvo indicação em contrário. Preprints e código seguem as licenças indicadas em cada repositório.</p>
+    <p>Este site não usa cookies, não exibe anúncios e não carrega recursos de terceiros.</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=0457d6df1c" defer></script>
+
+</body>
+</html>

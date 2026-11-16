@@ -1,0 +1,74 @@
+# renatotavares.com — configuração do servidor (Hostinger / LiteSpeed, compatível com Apache)
+#
+# A hospedagem publica o repositório inteiro na raiz do site. Este arquivo:
+#   1. impede que os arquivos-fonte e de trabalho sejam servidos;
+#   2. define a página de erro 404;
+#   3. redireciona os endereços da versão anterior do site;
+#   4. configura cache e cabeçalhos de segurança.
+# Cada bloco está dentro de <IfModule>, de modo que um módulo ausente não derruba o site.
+
+Options -Indexes
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+ErrorDocument 404 /404.html
+
+# ---- 1. arquivos que não fazem parte do site público ----
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # código-fonte do gerador, relatórios internos, metadados de ferramentas e do Git
+  RewriteRule ^(src|_relatorios|node_modules|\.claude|\.git|\.github)(/|$) - [R=404,L]
+  RewriteRule ^(README\.md|CLAUDE\.md|package\.json|package-lock\.json|\.gitignore)$ - [R=404,L]
+
+  # ---- 3. endereços da versão anterior ----
+  # /index.html é o mesmo documento que /
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+  # arquivos da versão anterior que deixaram de existir
+  RewriteRule ^(styles\.css|script\.js)$ - [G,L]
+</IfModule>
+
+# ---- 4. tipos, cache e cabeçalhos ----
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/atom+xml .xml
+  AddType text/plain .txt
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 10 minutes"
+  ExpiresByType text/plain "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType application/atom+xml "access plus 1 hour"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  # CSS e JS levam um parâmetro de versão (?v=…) gerado na compilação
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=(), usb=()"
+  <FilesMatch "\.(woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  # app-ads.txt precisa continuar acessível na raiz para a verificação do AdMob
+  <Files "app-ads.txt">
+    Header set Cache-Control "public, max-age=3600"
+  </Files>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/xml application/atom+xml image/svg+xml text/plain
+</IfModule>

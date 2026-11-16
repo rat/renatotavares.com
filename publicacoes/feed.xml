@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR">
+  <title>Publicações de Renato Augusto Tavares</title>
+  <id>https://renatotavares.com/publicacoes/</id>
+  <link rel="self" type="application/atom+xml" href="https://renatotavares.com/publicacoes/feed.xml"/>
+  <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/"/>
+  <updated>2026-08-27T12:00:00Z</updated>
+  <author><name>Renato Augusto Tavares</name><uri>https://renatotavares.com/</uri></author>
+  <entry>
+    <title>Wirsching's Positive-Predecessor-Density Program: Proofs of Conjectures 1 and 3</title>
+    <id>https://renatotavares.com/publicacoes/programa-de-wirsching-conjecturas-1-e-3/</id>
+    <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/programa-de-wirsching-conjecturas-1-e-3/"/>
+    <published>2026-08-27T12:00:00Z</published>
+    <updated>2026-08-27T12:00:00Z</updated>
+    <summary>Demonstra duas das três conjecturas que Wirsching deixou em aberto em 2003 e reduz a sua cadeia de cinco condições a uma única, (⋆3). A Conjectura 2, que levaria a ela, continua em aberto, assim como a densidade positiva de predecessores.</summary>
+  </entry>
+  <entry>
+    <title>Wirsching's Conjecture 3, and the Periodic Correction to Berg–Krüppel's Density Asymptotic</title>
+    <id>https://renatotavares.com/publicacoes/conjectura-3-de-wirsching/</id>
+    <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/conjectura-3-de-wirsching/"/>
+    <published>2026-08-14T12:00:00Z</published>
+    <updated>2026-08-14T12:00:00Z</updated>
+    <summary>Primeira versão do resultado sobre a Conjectura 3: a correção periódica H em série de Fourier, a prova de que ela não é constante e o certificado intervalar da sua oscilação.</summary>
+  </entry>
+  <entry>
+    <title>Wirsching's Weak Covering Conjecture: An Extended Computation, a Conditional Bound, and the Structure of What Resists It</title>
+    <id>https://renatotavares.com/publicacoes/conjectura-da-cobertura-fraca/</id>
+    <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/conjectura-da-cobertura-fraca/"/>
+    <published>2026-08-14T12:00:00Z</published>
+    <updated>2026-08-14T12:00:00Z</updated>
+    <summary>Estende de ℓ = 20 para ℓ = 23 o cálculo exato do orçamento de cobertura j*(ℓ), prova que o excesso sobre a taxa prevista não é limitado, obtém uma cota superior linear condicional e descreve a estrutura dos resíduos que resistem à cobertura. A conjectura continua em aberto.</summary>
+  </entry>
+  <entry>
+    <title>A calibrated computational study of the accelerated 5x + 1 predecessor-count exponent</title>
+    <id>https://renatotavares.com/publicacoes/expoente-de-contagem-5x-mais-1/</id>
+    <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/expoente-de-contagem-5x-mais-1/"/>
+    <published>2026-09-15T12:00:00Z</published>
+    <updated>2026-09-15T12:00:00Z</updated>
+    <summary>Enumera exatamente a árvore reversa do mapa 5x+1 e calibra o estimador do expoente de contagem com seis construções sintéticas de alvo conhecido. A leitura calibrada é compatível com a previsão de Kontorovich–Lagarias; trata-se de evidência computacional sob hipóteses declaradas, não de demonstração.</summary>
+  </entry>
+  <entry>
+    <title>Comparison of Image Preprocessing Techniques for Vehicle License Plate Recognition Using OCR: Performance and Accuracy Evaluation</title>
+    <id>https://renatotavares.com/publicacoes/pre-processamento-para-ocr-de-placas/</id>
+    <link rel="alternate" type="text/html" href="https://renatotavares.com/publicacoes/pre-processamento-para-ocr-de-placas/"/>
+    <published>2024-10-15T12:00:00Z</published>
+    <updated>2024-10-15T12:00:00Z</updated>
+    <summary>Compara conversão para escala de cinza, CLAHE em RGB e filtro bilateral — isoladas e combinadas — como pré-processamento para OCR de placas veiculares brasileiras, com acurácia, precisão, recall, F1, curva ROC, AUC e ANOVA.</summary>
+  </entry>
+</feed>

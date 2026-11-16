@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Um cálculo exato com 263 GiB de estado — Renato Augusto Tavares</title>
+  <meta name="description" content="Como a tabela exata do orçamento de cobertura j*(ℓ) foi estendida de ℓ = 20 a ℓ = 23 em um computador comum.">
+  <meta name="author" content="Renato Augusto Tavares">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://renatotavares.com/projetos/computacao-para-a-cobertura-fraca/">
+  
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f2f3ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14171a" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Renato Augusto Tavares">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Um cálculo exato com 263 GiB de estado">
+  <meta property="og:description" content="Como a tabela exata do orçamento de cobertura j*(ℓ) foi estendida de ℓ = 20 a ℓ = 23 em um computador comum.">
+  <meta property="og:url" content="https://renatotavares.com/projetos/computacao-para-a-cobertura-fraca/">
+  <meta property="og:image" content="https://renatotavares.com/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Renato Augusto Tavares: ciência da computação, matemática computacional e engenharia de software">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Um cálculo exato com 263 GiB de estado">
+  <meta name="twitter:description" content="Como a tabela exata do orçamento de cobertura j*(ℓ) foi estendida de ℓ = 20 a ℓ = 23 em um computador comum.">
+  <meta name="twitter:image" content="https://renatotavares.com/assets/img/og.png">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="me" href="https://orcid.org/0009-0002-0196-3311">
+  <link rel="me" href="https://github.com/rat">
+  <link rel="alternate" type="application/atom+xml" title="Publicações de Renato Augusto Tavares" href="/publicacoes/feed.xml">
+  <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-serif-4-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}document.documentElement.className+=' js'})()</script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=8cc4866218">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://renatotavares.com/"},{"@type":"ListItem","position":2,"name":"Projetos","item":"https://renatotavares.com/projetos/"},{"@type":"ListItem","position":3,"name":"Cálculo da Cobertura Fraca","item":"https://renatotavares.com/projetos/computacao-para-a-cobertura-fraca/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="/" aria-label="Renato Augusto Tavares, página inicial"><svg class="mark" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/" aria-current="page">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li class="nav-lang"><a href="/en/" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+      <button class="tool theme-btn" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar entre tema claro e escuro"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.8a8.2 8.2 0 0 1 0 16.4z" fill="currentColor"/></svg></button>
+      <button class="tool menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-open="Menu" data-close="Fechar">Menu</button>
+    </div>
+  </div>
+</header>
+<main id="conteudo" tabindex="-1">
+<header class="page-head is-article"><div class="wrap grid"><nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li><a href="/projetos/">Projetos</a></li><li aria-current="page">Cálculo da Cobertura Fraca</li></ol></nav><h1>Um cálculo exato com 263 GiB de estado</h1><p class="lede">A tabela de <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mi>ℓ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">j^*(\ell)</annotation></semantics></math> da Conjectura da Cobertura Fraca parava em <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\ell = 20</annotation></semantics></math>. Levá-la a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">\ell = 23</annotation></semantics></math> multiplica o problema por 27. Este é o registro de como isso coube em um computador de 62 GiB, e do que foi preciso para confiar no resultado.</p></div></header><div class="article"><div class="wrap grid"><aside class="article-side"><dl class="kv"><dt>Contexto</dt><dd><a href="/pesquisa/cobertura-fraca/">A Conjectura da Cobertura Fraca</a></dd><dt>Papel</dt><dd>Autor único: algoritmo, implementação, execução e verificação</dd><dt>Tecnologias</dt><dd>Rust (rayon), Python (NumPy, SciPy), C++17</dd><dt>Máquina</dt><dd>AMD Ryzen 7 5700U, 8 núcleos e 16 threads, 62 GiB de RAM, sem GPU</dd><dt>Código</dt><dd><a href="https://github.com/faculdade/weak-covering-conjecture">GitHub</a><br><a href="https://doi.org/10.5281/zenodo.21877643">Zenodo</a></dd></dl><h2 id="toc-h">Nesta página</h2><nav class="toc" aria-labelledby="toc-h"><ol><li><a href="#problema">O problema</a></li><li><a href="#algoritmo">O algoritmo</a></li><li><a href="#custo">O custo</a></li><li><a href="#confianca">Como confiar</a></li><li><a href="#entorno">O que mais o repositório calcula</a></li></ol></nav></aside><div class="article-main"><div class="prose ">
+<h2 id="problema">O problema</h2>
+<p>É preciso encontrar, para cada precisão <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">\ell</annotation></semantics></math>, o menor <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math> tal que as somas <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><munder><mo movablelimits="true" largeop="true">∑</mo><mi>i</mi></munder><msup><mn>2</mn><msub><mi>a</mi><mi>i</mi></msub></msup><msup><mn>3</mn><mi>i</mi></msup></mrow><annotation encoding="application/x-tex">\sum_{i} 2^{a_i} 3^{i}</annotation></semantics></math>, com <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math> expoentes estritamente decrescentes escolhidos entre <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math> e <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>2</mn><mi>j</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2j-1</annotation></semantics></math>, atinjam todas as unidades módulo <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>3</mn><mi>ℓ</mi></msup></mrow><annotation encoding="application/x-tex">3^\ell</annotation></semantics></math>. Enumerar as somas é inviável: são <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mrow><mo>(</mo><mfrac linethickness="0"><mrow><mn>2</mn><mi>j</mi></mrow><mi>j</mi></mfrac><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">\binom{2j}{j}</annotation></semantics></math> delas, e para <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">\ell = 23</annotation></semantics></math> o orçamento é <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>j</mi><mo>=</mo><mn>27</mn></mrow><annotation encoding="application/x-tex">j = 27</annotation></semantics></math>. A enumeração direta deixa de ser tratável depois de <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\ell = 4</annotation></semantics></math>.</p>
+
+<h2 id="algoritmo">O algoritmo</h2>
+<p>O que importa não é a lista de somas, mas o conjunto de resíduos que elas atingem. Esse conjunto cabe em um vetor de bits com <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mn>3</mn><mi>ℓ</mi></msup></mrow><annotation encoding="application/x-tex">3^\ell</annotation></semantics></math> posições, e somar uma constante a todos os seus elementos é uma rotação cíclica do vetor.</p>
+<p>O programa é uma programação dinâmica do tipo mochila 0/1 sobre os expoentes, percorridos em ordem decrescente. Para cada quantidade de termos já escolhidos há um vetor de bits com os resíduos alcançáveis; considerar um novo expoente é girar cada vetor pelo valor correspondente e fazer um OU com o vetor da camada seguinte. Em Rust, os vetores são <code>Vec&lt;u64&gt;</code>, e cada rotação com OU é repartida entre os núcleos com a biblioteca rayon.</p>
+<p>A memória necessária é exata e previsível: <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>ℓ</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>·</mo><msup><mn>3</mn><mi>ℓ</mi></msup><mo>/</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">(\ell + 1) \cdot 3^{\ell} / 8</annotation></semantics></math> bytes.</p>
+
+<h2 id="custo">O custo</h2>
+</div><div class="table-wrap" tabindex="0" role="group" aria-label="Tabela: custo por nível"><table>
+          <caption>Custo do cálculo por nível, na máquina de referência</caption>
+          <thead><tr><th scope="col">Nível</th><th scope="col" class="num">Estado</th><th scope="col" class="num">Tempo de parede</th><th scope="col">Observação</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">ℓ = 1 a 16</th><td class="num">até 0,1 GiB</td><td class="num">6 s</td><td></td></tr>
+            <tr><th scope="row">ℓ = 17 a 19</th><td class="num">até 2,7 GiB</td><td class="num">3,5 min</td><td></td></tr>
+            <tr><th scope="row">ℓ = 20</th><td class="num">9 GiB</td><td class="num">10 min</td><td>Limite da tabela anterior</td></tr>
+            <tr><th scope="row">ℓ = 21</th><td class="num">27 GiB</td><td class="num">748 s</td><td>Cabe na memória física</td></tr>
+            <tr><th scope="row">ℓ = 22</th><td class="num">84 GiB</td><td class="num">10 749 s</td><td>Exigiu 500 GiB de swap</td></tr>
+            <tr><th scope="row">ℓ = 23</th><td class="num">263 GiB</td><td class="num">375 615 s</td><td>Cerca de 104 horas</td></tr>
+          </tbody>
+        </table></div><div class="prose ">
+<p>A partir de <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\ell = 22</annotation></semantics></math> o estado não cabe na memória física, e o cálculo passa a depender de 500 GiB de memória virtual em disco. O último nível levou mais de quatro dias. Cada orçamento descartado é registrado em um arquivo de progresso, para que um reinício não refaça o que já foi excluído. Não há retomada do estado completo: interromper o processo perde a tentativa em curso.</p>
+<p>A tabela para em <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">\ell = 23</annotation></semantics></math> porque esse é o último nível com resultado completo e verificado. O seguinte pediria cerca de 820 GiB.</p>
+
+<h2 id="confianca">Como confiar</h2>
+<p>Um número que custou 104 horas é exatamente o tipo de número em que não se deve confiar por cansaço. As defesas, em ordem crescente de alcance:</p>
+<ul>
+  <li><strong>Enumeração direta</strong> para <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>≤</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\ell \le 4</annotation></semantics></math>, em um programa que não compartilha nenhum caminho de código com a programação dinâmica.</li>
+  <li><strong>Valores de referência</strong> para <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ell = 1</annotation></semantics></math> a <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math> e uma conferência pontual, em <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\ell = 2</annotation></semantics></math> e <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>j</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">j = 2</annotation></semantics></math>, em que a imagem é <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">{</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>5</mn><mo separator="true">,</mo><mn>7</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{1, 2, 5, 7\}</annotation></semantics></math> módulo 9 e faltam <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mo stretchy="false">{</mo><mn>4</mn><mo separator="true">,</mo><mn>8</mn><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{4, 8\}</annotation></semantics></math>. Essa validação é o primeiro comando das instruções, antes de qualquer execução longa.</li>
+  <li><strong>Uma implementação independente em Python</strong>, validada contra a tabela até <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">\ell = 17</annotation></semantics></math>, que confirma <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msup><mi>j</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mn>21</mn><mo stretchy="false">)</mo><mo>=</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">j^*(21) = 25</annotation></semantics></math>.</li>
+  <li><strong>Um lema</strong>, com prova, de que nenhum orçamento menor que <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">\ell</annotation></semantics></math> cobre, o que fecha a busca por baixo sem depender do programa.</li>
+</ul>
+<p>Para <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">\ell = 22</annotation></semantics></math> e <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mn>23</mn></mrow><annotation encoding="application/x-tex">23</annotation></semantics></math> não existe verificação cruzada por um segundo programa. O preprint diz isso, e os gráficos marcam esses dois pontos de forma diferente.</p>
+
+<h2 id="entorno">O que mais o repositório calcula</h2>
+<p>O mesmo repositório guarda o restante da parte computacional do artigo, com o custo de cada item declarado: o solucionador do jogo de payoff médio, com doze certificados armazenados (o maior tem 60 MB) e um verificador independente que os reconfere em menos de um minuto; o espectro de somas exponenciais em <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">\ell = 18</annotation></semantics></math>, que usa 22 GiB; e os conjuntos de resíduos não cobertos até <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">\ell = 21</annotation></semantics></math>, que sustentam os teoremas sobre a estrutura do que resiste.</p>
+<p>Cada tabela e cada afirmação numérica do artigo aponta para uma pasta e um comando.</p>
+</div><nav class="pager" aria-label="Projetos"><a href="/projetos/"><span>Voltar</span>Todos os projetos</a></nav></div></div></div>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-id">
+      <p class="foot-name"><svg class="mark" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 17.5C11 17.5 11 6.5 18.5 6.5M5 17.5H18.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="5" cy="17.5" r="3.1" fill="currentColor"/><circle class="mark-y" cx="18.5" cy="6.5" r="3.1"/><circle cx="18.5" cy="17.5" r="2.4" fill="currentColor"/></svg><span>Renato Augusto Tavares</span></p>
+      <p>Ciência da computação, matemática computacional e engenharia de software. Goiânia, Brasil.</p>
+      <p><a href="mailto:dr.renatotavares@gmail.com">dr.renatotavares@gmail.com</a></p>
+    </div>
+    <nav aria-label="Mapa do site">
+      <h2>Mapa do site</h2>
+      <ul>
+        <li><a href="/pesquisa/">Pesquisa</a></li>
+        <li><a href="/publicacoes/">Publicações</a></li>
+        <li><a href="/projetos/">Projetos</a></li>
+        <li><a href="/trajetoria/">Trajetória</a></li>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Perfis">
+      <h2>Perfis</h2>
+      <ul>
+        <li><a href="https://orcid.org/0009-0002-0196-3311" rel="me noopener">ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=5L2RbhMAAAAJ&hl=pt-BR" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://lattes.cnpq.br/9521612341950206" rel="noopener">Currículo Lattes</a></li>
+        <li><a href="https://github.com/rat" rel="me noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/java/" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Documentos legais">
+      <h2>Documentos legais</h2>
+      <ul>
+        <li><a href="/termos.html#privacidade">Política de Privacidade</a></li>
+        <li><a href="/termos.html#termos">Termos de Uso</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-base">
+    <p>© 2026 Renato Augusto Tavares. Textos e figuras deste site: todos os direitos reservados, salvo indicação em contrário. Preprints e código seguem as licenças indicadas em cada repositório.</p>
+    <p>Este site não usa cookies, não exibe anúncios e não carrega recursos de terceiros.</p>
+  </div>
+</footer>
+<script src="/assets/js/site.js?v=0457d6df1c" defer></script>
+
+</body>
+</html>

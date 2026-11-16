@@ -1,0 +1,11 @@
+{
+  "name": "renatotavares.com",
+  "private": true,
+  "description": "Site pessoal de Renato Augusto Tavares. HTML estático gerado por um script Node sem dependências.",
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1"
+  },
+  "engines": { "node": ">=18" }
+}
